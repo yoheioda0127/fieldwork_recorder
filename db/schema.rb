@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_12_29_034305) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.date "birthday", null: false
-    t.text "school_and_campany"
+    t.text "school_and_company"
     t.integer "major_id", null: false
     t.text "research_theme"
     t.text "introduction"

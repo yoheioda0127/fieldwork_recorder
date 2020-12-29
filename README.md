@@ -8,7 +8,8 @@
 | encrypted_password | string  | null: false |
 | birthday           | date    | null: false |
 | major_id           | integer | null: false | pulldown
-| research_theme     | text    | null: false |
+| school_and_company | text    |             |
+| research_theme     | text    |             |
 | introduction       | text    | null: false |
 
 ### Association
@@ -27,3 +28,19 @@
 
 ### Association
 - belongs_to :user
+
+
+サンプルユーザー
+その１
+User.create(name: "ようへい" , email: "yohei@gmail.com", password: "a02598765",encrypted_password: "" ,birthday: "19920127", school_and_company: "千葉大学大学院", major_id: "2",research_theme: "上総層群梅ヶ瀬層の塊状砂岩層の形成過程", introduction: "はじめまして、堆積学を専攻している大学院２年生です。アウトプットの場を増やそうとアプリをはじめました。よろしくお願いいたします。")
+
+その２
+
+
+サンプル記事
+
+その１
+Article.create(user_id: "2" , major_id: "2" ,title: "初めての野外調査", activity_date: "20200122",weather_id: "2", location: "新潟県長岡市小国地先", memo: "実習の時とは異なるコースでかなり苦戦した。また、位置確認が困難なコースだった。" , appeal_point: "マップを複数枚印刷して、水没に備えた。")
+
+その２
+Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野外調査", activity_date: "20200628",weather_id: "4", location: "千葉県市原市養老川付近", memo: "層厚最大20mのものが見られる。" , appeal_point: "ゴムボートを購入して、調査に導入したこと。")

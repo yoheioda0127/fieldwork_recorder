@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
@@ -8,7 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string  :email,               null: false, unique:true, default: ""
       t.string  :encrypted_password,  null: false, default: ""
       t.date    :birthday,            null: false
-      t.text    :school_and_campany
+      t.text    :school_and_company
       t.integer :major_id,            null: false
       t.text    :research_theme
       t.text    :introduction

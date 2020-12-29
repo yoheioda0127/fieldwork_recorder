@@ -1,24 +1,29 @@
-# README
+#テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+＃＃usersテーブル
+| Column             | Type    | Options     |
+| --------------     | ------- | ----------- |
+| name               | string  | null: false |
+| email              | string  | null: false |
+| encrypted_password | string  | null: false |
+| birthday           | date    | null: false |
+| major_id           | integer | null: false | pulldown
+| research_theme     | text    | null: false |
+| introduction       | text    | null: false |
 
-Things you may want to cover:
+### Association
+- has_many :articles
 
-* Ruby version
 
-* System dependencies
+＃＃articlesテーブル
+| Column       | Type    | Options           |
+| ------------ | ------- | -------------     |
+| major_id     | integer | foreign_key: true |
+| title        | string  | null: false       |
+| activity_date| date    | null: false       |
+| weather_id   | integer | null: false       | pulldown
+| memo         | text    | null: false       |
+| appeal_point | text    |                   |
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+- belongs_to :user

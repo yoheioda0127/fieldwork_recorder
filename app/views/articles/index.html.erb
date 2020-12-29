@@ -1,0 +1,15 @@
+<div class="contents row">
+  <%= link_to image_tag("adventure.png", class: "head_img"), "#" %>
+  <h1>タイムライン</h1>
+  <% @articles.each do |article| %>
+    <div class="content_post">
+      <ul class="article_overview">
+        <li><%= article.title %></li>
+        <li><%= article.activity_date %></li>
+        <li><%#= article.major_id.name %></li>
+        <li class="icon_image"><%#= user.icon_image %></li>
+        <li class="user_name"><%#= user.name %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

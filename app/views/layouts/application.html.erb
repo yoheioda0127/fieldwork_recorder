@@ -8,8 +8,21 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <header class='top-page-header'>
+    <h1>FieldworkRecorder</h1>
+    <div class='nav'>
+      <ul class='lists-right'>
+        <li>ログイン</li>
+        <li>新規登録</li>
+      </ul>
+    </div>
+  </header>
   <body>
     <%= yield %>
   </body>
+  <div class='footer-contents'>
+    <p class='footer-explain'>
+      努力(Fieldwork)の記録帳(Recorder)を始めよう
+    </p>
+  </div>
 </html>

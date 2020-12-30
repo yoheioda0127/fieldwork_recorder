@@ -6,9 +6,9 @@
       <ul class="article_overview">
         <li><%= article.title %></li>
         <li><%= article.activity_date %></li>
+        <li class="user_name"><%= article.user.name %></li>
         <li><%#= article.major_id.name %></li>
-
-        <li class="user_name"><%= @users.name %></li>
+        <li class="icon_image"><%#= image_tag @users.image, class: 'message-image' %></div></li>
       </ul>
     </div>
   <% end %>

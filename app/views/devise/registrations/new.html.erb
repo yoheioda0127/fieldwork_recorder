@@ -36,8 +36,7 @@
   </div>
 
   <div class="weight-bold-text">
-    商品の状態
-    <span class="indispensable">必須</span>
+    専攻科目（一番近い科目を選択してください）
   </div>
   <%= f.collection_select(:major_id, Major.all, :id, :name, {}, {class:"select-box", id:"major_id"}) %>
 

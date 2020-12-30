@@ -8,7 +8,7 @@
         <li><%= article.activity_date %></li>
         <li class="user_name"><%= article.user.name %></li>
         <li><%#= article.major_id.name %></li>
-        <li class="icon_image"><%#= image_tag @users.image, class: 'message-image' %></div></li>
+        <li class="icon_image"><%#= image_tag article.user.image, class: 'message-image' %></div></li>
       </ul>
     </div>
   <% end %>

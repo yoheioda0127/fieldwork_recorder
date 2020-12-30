@@ -1,15 +1,24 @@
-<h2>Sign up</h2>
+<h2>新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+  <div class="img-upload">
+    <div class="icon_image_intro">
+      プロフィール画像（アイコンになります）
+    </div>
+    <div class="icon_image_upload">
+      <%= f.file_field :image, id:"icon_image" %>
+    </div>
+  </div>
+
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :"メールアドレス" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :"パスワード" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,12 +26,33 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :"パスワード（確認用）" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :"現在の所属（学校、会社など）" %><br />
+    <%= f.text_field :school_and_company, autocomplete: "school_and_company" %>
+  </div>
+
+  <div class="weight-bold-text">
+    商品の状態
+    <span class="indispensable">必須</span>
+  </div>
+  <%= f.collection_select(:major_id, Major.all, :id, :name, {}, {class:"select-box", id:"major_id"}) %>
+
+  <div class="field">
+    <%= f.label :"現在の研究テーマ" %><br />
+    <%= f.text_field :research_theme, autocomplete: "research_theme" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"自己紹介" %><br />
+    <%= f.text_area :introduction, autocomplete: "introduction" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録する" %>
   </div>
 <% end %>
 

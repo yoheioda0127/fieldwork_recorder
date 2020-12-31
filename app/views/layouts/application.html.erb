@@ -9,12 +9,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class='top-page-header'>
-    <h1>FieldworkRecorder</h1>
+    <h1><%= link_to 'FieldworkRecorder', "/", class: "app_name"  %></h1>
     <div class='nav'>
       <ul class='lists-right'>
-        <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
-        <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.name, "/articls", class: "user-name" %></li>
+        <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
         <li><%= link_to '記事投稿', "/articles/new", class: "post-article" %></li>
+      <% else %>
+        <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
+        <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
+      <% end %>
       </ul>
     </div>
   </header>

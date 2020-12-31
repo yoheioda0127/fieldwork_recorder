@@ -5,7 +5,19 @@ class ArticlesController < ApplicationController
     Article.includes(:user).order("created_at DESC")
     @articles = Article.all
     @users = User.all
-
+  end
+  
+  def new
+    @article = Article.new
   end
 
+  def create
+    @article = Article.new(article_params)
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:user_id, :major_id, :title, :activity_date, :weather_id, :location, :appeal_point, :memo, :image).merge(user_id: current_user.id)
+  end
 end

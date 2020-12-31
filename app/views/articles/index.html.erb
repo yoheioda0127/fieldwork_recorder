@@ -6,9 +6,9 @@
       <ul class="article_overview">
         <li><%= article.title %></li>
         <li><%= article.activity_date %></li>
-        <li><%#= article.major_id.name %></li>
-        <li class="icon_image"><%#= user.icon_image %></li>
-        <li class="user_name"><%#= user.name %></li>
+        <li class="user_name"><%= article.user.name %></li>
+        <li><%#= article.major.name %></li>
+        <li class="avater"><%= image_tag article.user.avater, class: 'avater' %></li>
       </ul>
     </div>
   <% end %>

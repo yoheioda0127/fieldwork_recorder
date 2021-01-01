@@ -1,4 +1,5 @@
 class Weather < ActiveHash::Base
+
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '快晴' },
@@ -16,6 +17,8 @@ class Weather < ActiveHash::Base
     { id: 14, name: '大雪' },
     { id: 15, name: 'その他' }
   ]
+
   include ActiveHash::Associations
   has_many :articles
+  
  end

@@ -1,8 +1,9 @@
-<h2>活動記事投稿</h2>
+<h2>記事の編集・削除</h2>
 
-<%= form_for(@article) do |f| %>
+<h3>記事の編集</h3>
 
-  <div class="field">
+<%= form_with model: @article, local: true do |f| %>
+<div class="field">
     <%= f.label :"タイトル" %><br />
     <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
   </div>
@@ -42,11 +43,6 @@
   <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather_id"}) %>
 
   <div class="field">
-    <%= f.label :"調査地" %><br />
-    <%= f.text_field :location, autocomplete: "location" %>
-  </div>
-
-  <div class="field">
     <%= f.label :"活動メモ" %><br />
     <%= f.text_area :memo, autocomplete: "memo" %>
   </div>
@@ -57,6 +53,13 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "投稿する" %>
+    <%= f.submit "更新する" %>
   </div>
+</div>
 <% end %>
+
+<h3>記事の削除</h3>
+
+<p>記事を削除しますか? <%= button_to "記事を削除", article_path(@article.id), data: { confirm: "記事を削除しますか?" }, method: :delete %></p>
+
+<%= link_to "戻る", :back %>

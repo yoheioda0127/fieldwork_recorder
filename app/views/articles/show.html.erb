@@ -1,0 +1,27 @@
+<div class="article-show">
+  <div class="article-box">
+    <h2 class="title">
+      <%= @article.title %>
+    </h2>
+    <h3 class="title">
+      <%= @article.activity_date %>
+    </h3>
+    <h3 class="user_name">
+      <%= @article.user.name %>
+    </h3>
+    <div class='article-img-content'>
+      <%= image_tag @article.image ,class:"article-box-img" %>
+    </div>
+    <h3 class="title">
+      <%= @article.location %>
+    </h3>
+    <h3 class="title">
+      <%= @article.memo %>
+    </h3>
+    <h3 class="title">
+      <%= @article.appeal_point %>
+    </h3>
+  </div>
+</div>
+
+<%= link_to "戻る", :back %>

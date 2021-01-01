@@ -1,4 +1,4 @@
-<h2>記事の編集・削除 <%= resource_name.to_s.humanize %></h2>
+<h2>記事の編集・削除</h2>
 
 <h3>記事の編集</h3>
 
@@ -60,6 +60,6 @@
 
 <h3>記事の削除</h3>
 
-<p>記事を削除しますか? <%= button_to "記事を削除", article_path(resource_name), data: { confirm: "記事を削除しますか?" }, method: :delete %></p>
+<p>記事を削除しますか? <%= button_to "記事を削除", article_path(@article.id), data: { confirm: "記事を削除しますか?" }, method: :delete %></p>
 
 <%= link_to "戻る", :back %>

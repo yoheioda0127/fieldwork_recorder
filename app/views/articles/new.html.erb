@@ -1,7 +1,6 @@
 <h2>活動記事投稿</h2>
 
 <%= form_for(@article) do |f| %>
-  <%#= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :"タイトル" %><br />
@@ -41,6 +40,11 @@
     当日の天気
   </div>
   <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather_id"}) %>
+
+  <div class="field">
+    <%= f.label :"調査地" %><br />
+    <%= f.text_field :location, autocomplete: "location" %>
+  </div>
 
   <div class="field">
     <%= f.label :"活動メモ" %><br />

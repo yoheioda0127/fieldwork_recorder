@@ -15,6 +15,12 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
   end
 
+  def edit
+    User.find(params[:id])
+    @user.user_id != current_user.id || @user.information.present?
+    redirect_to action: :index
+  end
+
   private
 
   def article_params

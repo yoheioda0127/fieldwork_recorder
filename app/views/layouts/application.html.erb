@@ -14,6 +14,7 @@
       <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to current_user.name, "/articls", class: "user-name" %></li>
+        <li><%= link_to 'プロフィール編集', "/users/edit", method: :edit, class: "edit" %></li>
         <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
         <li><%= link_to '記事投稿', "/articles/new", class: "post-article" %></li>
       <% else %>

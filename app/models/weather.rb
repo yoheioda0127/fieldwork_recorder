@@ -16,4 +16,6 @@ class Weather < ActiveHash::Base
     { id: 14, name: '大雪' },
     { id: 15, name: 'その他' }
   ]
+  include ActiveHash::Associations
+  has_many :articles
  end

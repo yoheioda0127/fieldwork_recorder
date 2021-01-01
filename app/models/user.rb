@@ -1,8 +1,10 @@
 class User < ApplicationRecord
+  extend ActiveHash::Associations::ActiveRecordExtensions
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :articles
   has_one_attached :avater
+  belongs_to       :major
 
 
   with_options presence: true do

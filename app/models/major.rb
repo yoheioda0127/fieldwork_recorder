@@ -1,4 +1,5 @@
 class Major < ActiveHash::Base
+
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: '地質' },
@@ -16,6 +17,8 @@ class Major < ActiveHash::Base
     { id: 14, name: '歴史' },
     { id: 15, name: 'その他' }
   ]
+
   include ActiveHash::Associations
   has_many :users
+  
  end

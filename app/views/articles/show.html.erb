@@ -15,11 +15,12 @@
     <h3 class="user_name">
       <%= @article.user.name %>
     </h3>
+    <li>総活動日数：<%= @days %>日間</li>
     <div class='article-img-content'>
       <%= image_tag @article.image ,class:"article-box-img" %>
     </div>
     <h3 class="title">
-      <%= @article.location %>
+      活動地域：<%= @article.location %>
     </h3>
     <h3 class="title">
       <%= @article.memo %>

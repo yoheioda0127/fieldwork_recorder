@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many         :articles
-  has_one_attached :avater
+  has_one_attached :avatar
   belongs_to       :major
 
 
@@ -16,4 +16,7 @@ class User < ApplicationRecord
 
   validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: 'は半角英数字を使用してください！！' }
 
+  def was_attached?
+    self.avatar.attached?
+  end
 end

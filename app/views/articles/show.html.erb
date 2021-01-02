@@ -9,6 +9,9 @@
     <h3 class="user_name">
       <%= @article.weather.name %>
     </h3>
+    <div class='article-img-content'>
+      <%= image_tag @article.user.avatar.variant(resize:'50x50') ,class:"article-box-img" %>
+    </div>
     <h3 class="user_name">
       <%= @article.user.name %>
     </h3>

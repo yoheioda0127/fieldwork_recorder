@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2020_12_29_122425) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "major_id"
     t.string "title", null: false
     t.date "activity_date", null: false
     t.integer "weather_id", null: false

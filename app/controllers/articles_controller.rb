@@ -4,6 +4,10 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.includes(:user).order("created_at DESC")
     @users = User.all
+    def activity
+      (Article.count).to_s
+    end
+    @days = activity
   end
   
   def new
@@ -21,6 +25,10 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    def activity
+      (Article.count).to_s
+    end
+    @days = activity
   end
 
   def edit

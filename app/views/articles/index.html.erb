@@ -7,7 +7,7 @@
       <ul class="article_overview">
         <li><%= article.title %></li>
         <li>活動日：<%= article.activity_date %></li>
-        <li class="active_img"><%= image_tag article.image.variant(resize:'250x250'), class: 'image' %></li>
+        <li class="active_img"><%= image_tag article.image.variant(resize:'250x250'), class: 'activity_image' %></li>
         <li class="avatar"><%= image_tag article.user.avatar.variant(resize:'50x50'), class: 'avatar' %></li>
         <li class="user_name"><%= article.user.name %></li>
         <li><%= article.user.major.name %></li>

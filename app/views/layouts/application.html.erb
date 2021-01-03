@@ -11,17 +11,17 @@
   <header class='top-page-header'>
     <h1><%= link_to 'FieldworkRecorder', "/", class: "app_name"  %></h1>
     <div class='nav'>
-      <ul class='lists-right'>
+      <div class='lists-right'>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.name, "/", class: "user-name" %></li>
-        <li><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></li>
-        <li><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></li>
-        <li><%= link_to '記事投稿', "/articles/new", class: "post-article" %></li>
+        <div class = user_name_link><%= link_to current_user.name, "/", class: "user-name" %></div>
+        <div><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></div>
+        <div><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></div>
+        <div><%= link_to '記事投稿', "/articles/new", class: "post-article" %></div>
       <% else %>
-        <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
-        <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li>
+        <div><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></div>
+        <div><%= link_to 'ログイン', "/users/sign_in", class: "login" %></div>
       <% end %>
-      </ul>
+      </div>
     </div>
   </header>
   <body>

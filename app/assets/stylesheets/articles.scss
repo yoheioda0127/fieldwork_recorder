@@ -80,11 +80,13 @@
   color: gray;
   list-style: none;
   text-decoration: none;
-  color: rgb(255, 136, 0);
+  color: blue;
   font-size: 170%;
 }
 .post-article:hover {
   text-decoration: underline;
+  color: white;
+  background-color: gray;
 }
 
 .sign-up {
@@ -118,6 +120,10 @@
 }
 //ヘッダー部分↑
 
+.time-line-word{
+  font-size: 250%;
+}
+
 .time-line {
   display: flex;
   justify-content: center;
@@ -128,25 +134,83 @@
   list-style: none;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.active-all{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.active-all:hover {
+  color: gray;
 }
 
 .content-part {
-  background-color: lightgray;
   width: 25vw;
 }
 
 
-.activity_image {
-    width: 20vw;
-    height: 23vh;
-    list-style: none;
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
 }
 
-.activity_title{
-  list-style: none;
-  text-decoration: none;
-  list-style: none;
+.active-day {
+  display: flex;
+  justify-content: center;
+  font-size: 110%;
 }
+.activeday:hover {
+  color: gray;
+}
+
+.active-img {
+  display: flex;
+  justify-content: center;
+}
+
+.activity_image {
+  width: 27vw;
+  height: 31vh;
+  list-style: none;
+  color: black;
+}
+
+.personal {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.content_user_name {
+  display: flex;
+  justify-content: center;
+}
+
+.other-info {
+  
+}
+
+.content-major {
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  color: white;
+}
+
+.content-all-day {
+  display: flex;
+  justify-content: center;
+}
+
 //投稿部分↑
 
 //フッター部分↓

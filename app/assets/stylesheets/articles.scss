@@ -1,3 +1,147 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//ヘッダー部分↓
+
+.top-page-header{
+  display: flex;
+}
+
+.nav {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app_name {
+  color: blue;
+  text-decoration: none;
+  font-size: 150%;
+  font-family: arial black;
+  margin: 0px;
+}
+.concept-word {
+  text-decoration: none;
+  font-family: Serif;
+  font-size: 120%;
+  margin: 0px;
+}
+
+.nav-lists {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: flex-end;
+  color: blue;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.user:hover {
+  text-decoration: underline;
+}
+
+.edit {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+.edit:hover {
+  text-decoration: underline;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+.logout:hover {
+  text-decoration: underline;
+}
+
+
+.post-article {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(255, 136, 0);
+  font-size: 170%;
+}
+.post-article:hover {
+  text-decoration: underline;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+.sign-up:hover {
+  text-decoration: underline;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+
+.login:hover {
+  text-decoration: underline;
+}
+
+
+.head_img {
+  width: 100vw;
+  height: 50vh;
+  text-decoration: none;
+}
+//ヘッダー部分↑
+
+//投稿部分↓
+.content_post {;
+  background-color: rgb(255, 249, 194);
+  width: 25vw;
+  list-style: none;
+}
+
+
+.activity_image {
+    width: 20vw;
+    height: 23vh;
+    list-style: none;
+}
+
+.activity_title{
+  list-style: none;
+  text-decoration: none;
+  list-style: none;
+}
+//投稿部分↑
+
+//フッター部分↓
+.footer-contents {
+  width: 100vw;
+  background-color: lightgray;
+}
+//フッター部分↑

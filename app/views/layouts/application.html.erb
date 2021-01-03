@@ -9,27 +9,25 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header class='top-page-header'>
-    <h1><%= link_to 'FieldworkRecorder', "/", class: "app_name"  %></h1>
     <div class='nav'>
-      <div class='lists-right'>
+      <h1><%= link_to 'FieldworkRecorder', "/", class: "app_name"  %></h1>
+      <p class='concept-word'><b>努力の記録を始めよう</b></p>
+    </div>
+    <div class='nav-lists'>
       <% if user_signed_in? %>
-        <div class = user_name_link><%= link_to current_user.name, "/", class: "user-name" %></div>
-        <div><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></div>
         <div><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></div>
-        <div><%= link_to '記事投稿', "/articles/new", class: "post-article" %></div>
+        <div><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></div>
+        <div class = user_name><b><%= link_to current_user.name, "/", class: "user" %></b></div>
+        <div><b><%= link_to '記事投稿', "/articles/new", class: "post-article" %></b></div>
       <% else %>
         <div><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></div>
         <div><%= link_to 'ログイン', "/users/sign_in", class: "login" %></div>
       <% end %>
-      </div>
     </div>
   </header>
   <body>
     <%= yield %>
   </body>
   <div class='footer-contents'>
-    <p class='footer-explain'>
-      努力(Fieldwork)の記録帳(Recorder)を始めよう
-    </p>
   </div>
 </html>

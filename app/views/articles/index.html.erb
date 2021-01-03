@@ -4,15 +4,13 @@
   <% @articles.each do |article| %>
     <%= link_to article_path(article.id) do %>
     <div class="content_post">
-      <ul class="article_overview">
-        <li><%= article.title %></li>
-        <li>活動日：<%= article.activity_date %></li>
-        <li class="active_img"><%= image_tag article.image.variant(resize:'250x250'), class: 'activity_image' %></li>
-        <li class="avatar"><%= image_tag article.user.avatar.variant(resize:'50x50'), class: 'avatar' %></li>
-        <li class="user_name"><%= article.user.name %></li>
-        <li><%= article.user.major.name %></li>
-        <li>総活動日数：<%= @days %>日間</li>
-      </ul>
+        <div><%= article.title %></div>
+        <div>活動日：<%= article.activity_date %></div>
+        <div class="active_img"><%= image_tag article.image, class: 'activity_image' %></div>
+        <div class="avatar"><%= image_tag article.user.avatar.variant(resize:'50x50'), class: 'avatar' %></div>
+        <div class="content_user_name"><%= article.user.name %></div>
+        <div><%= article.user.major.name %></div>
+        <div>総活動日数：<%= @days %>日間</div>
     </div>
     <% end %>
   <% end %>

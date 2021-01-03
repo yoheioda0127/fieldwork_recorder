@@ -118,11 +118,21 @@
 }
 //ヘッダー部分↑
 
+.time-line {
+  display: flex;
+  justify-content: center;
+}
+
 //投稿部分↓
-.content_post {;
-  background-color: rgb(255, 249, 194);
-  width: 25vw;
+.content_post {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content-part {
+  background-color: lightgray;
+  width: 25vw;
 }
 
 

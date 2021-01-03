@@ -1,17 +1,21 @@
 <div class="contents row">
   <%= link_to image_tag("adventure.png", class: "head_img"), "#" %>
-  <h1>タイムライン</h1>
+  <div class = "time-line">
+    <h1 class = "time-line-word" >タイムライン</h1>
+  </div>
+  <div class="content_post">
   <% @articles.each do |article| %>
     <%= link_to article_path(article.id) do %>
-    <div class="content_post">
-        <div><%= article.title %></div>
+      <div class = "content-part">
+        <div><b><%= article.title %></b></div>
         <div>活動日：<%= article.activity_date %></div>
         <div class="active_img"><%= image_tag article.image, class: 'activity_image' %></div>
         <div class="avatar"><%= image_tag article.user.avatar.variant(resize:'50x50'), class: 'avatar' %></div>
-        <div class="content_user_name"><%= article.user.name %></div>
+        <div class="content_user_name"><b><%= article.user.name %></b></div>
         <div><%= article.user.major.name %></div>
-        <div>総活動日数：<%= @days %>日間</div>
-    </div>
+        <div>投稿日数：<%= @days %>日間</div>
+      </div>
     <% end %>
   <% end %>
+  </div>
 </div>

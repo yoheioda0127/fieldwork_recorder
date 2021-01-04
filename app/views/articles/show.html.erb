@@ -1,24 +1,36 @@
 <div class="article-show">
   <div class="article-box">
-    <h2 class="title">
-      <%= @article.title %>
-    </h2>
-    <h3 class="title">
-      <%= @article.activity_date %>
-    </h3>
-    <h3 class="user_name">
-      <%= @article.weather.name %>
-    </h3>
-    <div class='article-img-content'>
-      <%= image_tag @article.user.avatar.variant(resize:'50x50') ,class:"article-box-img" %>
+    <div class = "title-box">
+      <h2 class="title-text">
+        <%= @article.title %>
+      </h2>
     </div>
-    <h3 class="user_name">
-      <%= @article.user.name %>
-    </h3>
-    <li>総活動日数：<%= @days %>日間</li>
-    <div class='article-img-content'>
-      <%= image_tag @article.image ,class:"article-box-img" %>
+    <div class= "date-weather-box">
+      <div class = "date-box">
+        <h3 class="date-text">
+          活動日：<%= @article.activity_date %>
+        </h3>
+      </div>
     </div>
+    <div class="weather-box">
+      <h3 class="weather-text">
+        当日の天気：<%= @article.weather.name %>
+      </h3>
+    </div>
+    <div class = "user-info">
+      <div class=''>
+        <%= image_tag @article.user.avatar.variant(resize:'50x50') ,class:"avatar-box-img" %>
+      </div>
+      <h3 class="user_name">
+        <%= @article.user.name %>
+      </h3>
+    </div>
+    <!--<div>総活動日数：<%= @days %>日間</div>-->
+    <div class='article-img-content'>
+      <div class='article-img'>
+        <%= image_tag @article.image ,class:"article-box-img" %>
+      </div>
+    </div>  
     <h3 class="title">
       活動地域：<%= @article.location %>
     </h3>
@@ -28,7 +40,9 @@
     <h3 class="title">
       <%= @article.appeal_point %>
     </h3>
+    <div class='article-edit-delete'>
+      <%= link_to "記事の編集・削除を行う", edit_article_path(@article.id), class: "footer-edit" %>
+    </div>
   </div>
 </div>
-<%= link_to "記事の編集・削除を行う", edit_article_path(@article.id), class: "edit" %>
-<%= link_to "戻る", :back %>
+<%= link_to "戻る", :back  ,class: "footer-back"%>

@@ -44,7 +44,7 @@
   color: blue;
   list-style: none;
   text-decoration: none;
-  font-size: 120%;
+  font-size: 150%;
 }
 
 .user:hover {
@@ -77,16 +77,20 @@
 .post-article {
   display: flex;
   justify-content: flex-end;
-  color: gray;
-  list-style: none;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(250, 139, 158);/*文字色*/
+  background: #FFF;
+  border: solid 3px rgb(250, 139, 158);/*線*/
+  border-radius: 10px;/*角の丸み*/
   text-decoration: none;
-  color: blue;
-  font-size: 170%;
+  font-size: 150%;
 }
 .post-article:hover {
   text-decoration: underline;
-  color: white;
-  background-color: gray;
+  color: purple;
+  border: solid 3px purple;/*線*/
 }
 
 .sign-up {
@@ -95,6 +99,7 @@
   color: gray;
   list-style: none;
   text-decoration: none;
+  font-size: 150%;
 }
 .sign-up:hover {
   text-decoration: underline;
@@ -106,6 +111,7 @@
   color: gray;
   list-style: none;
   text-decoration: none;
+  font-size: 150%;
 }
 
 .login:hover {
@@ -218,4 +224,84 @@
   width: 100vw;
   background-color: lightgray;
 }
-//フッター部分↑
+//フッター部分↑.
+
+
+//SHOWページ↓
+
+.article-box {
+  background-color: lightgrey;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+}
+
+.date-box {
+  display: flex;
+  justify-content: center;
+  font-size: 100%;
+}
+
+.date-text {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.weather-text {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.user-info {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.article-img-content {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.article-box-img {
+  width: 27vw;
+  height: 31vh;
+  list-style: none;
+  color: black;
+}
+
+.article-edit-delete {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-edit {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: gray;/*文字色*/
+  background: #FFF;
+  border: solid 3px gray;/*線*/
+  text-decoration: none;
+}
+.footer-edit:hover {
+  color: black;
+}

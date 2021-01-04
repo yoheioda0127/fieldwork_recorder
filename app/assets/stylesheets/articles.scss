@@ -1,3 +1,307 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//ヘッダー部分↓
+
+.top-page-header{
+  display: flex;
+}
+
+.nav {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app_name {
+  color: blue;
+  text-decoration: none;
+  font-size: 150%;
+  font-family: arial black;
+  margin: 0px;
+}
+.concept-word {
+  text-decoration: none;
+  font-family: Serif;
+  font-size: 120%;
+  margin: 0px;
+}
+
+.nav-lists {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: flex-end;
+  color: blue;
+  list-style: none;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.user:hover {
+  text-decoration: underline;
+}
+
+.edit {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+.edit:hover {
+  text-decoration: underline;
+}
+
+.logout {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+}
+.logout:hover {
+  text-decoration: underline;
+}
+
+
+.post-article {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(250, 139, 158);/*文字色*/
+  background: #FFF;
+  border: solid 3px rgb(250, 139, 158);/*線*/
+  border-radius: 10px;/*角の丸み*/
+  text-decoration: none;
+  font-size: 150%;
+}
+.post-article:hover {
+  text-decoration: underline;
+  color: purple;
+  border: solid 3px purple;/*線*/
+}
+
+.sign-up {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+  font-size: 150%;
+}
+.sign-up:hover {
+  text-decoration: underline;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.login:hover {
+  text-decoration: underline;
+}
+
+
+.head_img {
+  width: 100vw;
+  height: 50vh;
+  text-decoration: none;
+}
+//ヘッダー部分↑
+
+.time-line-word{
+  font-size: 250%;
+}
+
+.time-line {
+  display: flex;
+  justify-content: center;
+}
+
+//投稿部分↓
+.content_post {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.active-all{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.active-all:hover {
+  color: gray;
+}
+
+.content-part {
+  width: 25vw;
+}
+
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
+}
+
+.active-day {
+  display: flex;
+  justify-content: center;
+  font-size: 110%;
+}
+.activeday:hover {
+  color: gray;
+}
+
+.active-img {
+  display: flex;
+  justify-content: center;
+}
+
+.activity_image {
+  width: 27vw;
+  height: 31vh;
+  list-style: none;
+  color: black;
+}
+
+.personal {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+}
+
+.content_user_name {
+  display: flex;
+  justify-content: center;
+}
+
+.other-info {
+  
+}
+
+.content-major {
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  color: white;
+}
+
+.content-all-day {
+  display: flex;
+  justify-content: center;
+}
+
+//投稿部分↑
+
+//フッター部分↓
+.footer-contents {
+  width: 100vw;
+  background-color: lightgray;
+}
+//フッター部分↑.
+
+
+//SHOWページ↓
+
+.article-box {
+  background-color: lightgrey;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+}
+
+.date-box {
+  display: flex;
+  justify-content: center;
+  font-size: 100%;
+}
+
+.date-text {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.weather-text {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.user-info {
+  display: flex;
+  font-family: sans-serif;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 120%;
+}
+
+.article-img-content {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.article-box-img {
+  width: 27vw;
+  height: 31vh;
+  list-style: none;
+  color: black;
+}
+
+.article-edit-delete {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-edit {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: gray;/*文字色*/
+  background: #FFF;
+  border: solid 3px gray;/*線*/
+  text-decoration: none;
+}
+.footer-edit:hover {
+  color: black;
+}

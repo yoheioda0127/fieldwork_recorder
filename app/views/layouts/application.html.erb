@@ -15,13 +15,13 @@
     </div>
     <div class='nav-lists'>
       <% if user_signed_in? %>
-        <div><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></div>
-        <div><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></div>
+        <div><b><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></b></div>
+        <div><b><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></b></div>
         <div class = user_name><b><%= link_to current_user.name, "/", class: "user" %></b></div>
         <div><b><%= link_to '記事投稿', "/articles/new", class: "post-article" %></b></div>
       <% else %>
-        <div><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></div>
-        <div><%= link_to 'ログイン', "/users/sign_in", class: "login" %></div>
+        <div><b><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></b></div>
+        <div><b><%= link_to 'ログイン', "/users/sign_in", class: "login" %></b></div>
       <% end %>
     </div>
   </header>

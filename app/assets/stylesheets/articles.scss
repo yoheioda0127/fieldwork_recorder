@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//ヘッダー部分↓
+//ヘッダーバナー部分↓
 
 .top-page-header{
   display: flex;
@@ -12,30 +12,16 @@
   background-color: white;
 }
 
-.nav {
-  width: 50vw;
+.app_logo_img {
+  width: 30vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
 
-.app_name {
-  color: blue;
-  text-decoration: none;
-  font-size: 150%;
-  font-family: arial black;
-  margin: 0px;
-}
-.concept-word {
-  text-decoration: none;
-  font-family: Serif;
-  font-size: 120%;
-  margin: 0px;
-}
-
 .nav-lists {
-  width: 50vw;
+  width: 70vw;
   display: flex;
   justify-content: space-around;
   align-items: center;

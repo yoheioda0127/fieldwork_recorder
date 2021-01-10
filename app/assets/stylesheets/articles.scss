@@ -6,6 +6,10 @@
 
 .top-page-header{
   display: flex;
+  // position: fixed;
+  // top: 0;
+  // z-index: 100;
+  background-color: white;
 }
 
 .nav {
@@ -121,7 +125,7 @@
 
 .head_img {
   width: 100vw;
-  height: 50vh;
+  height: 65vh;
   text-decoration: none;
 }
 //ヘッダー部分↑

@@ -1,7 +1,7 @@
 <div class="contents row">
   <%= link_to image_tag("adventure.png", class: "head_img"), "#" %>
   <div class = "time-line">
-    <h1 class = "time-line-word" >タイムライン</b></h1>
+    <h1 class = "time-line-word" ><b>タイムライン</b></h1>
   </div>
   <div class="content_post">
   <% @articles.each do |article| %>
@@ -17,7 +17,7 @@
           <div >活動日：<%= article.activity_date %></div>
         </div>
         <div class="active-img">
-          <div ><%= image_tag article.image, class: 'activity_image' %></div>
+          <div ><%= image_tag article.top_image, class: 'activity_top_image' %></div>
         </div>
        
         <div class = "personal">

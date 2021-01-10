@@ -28,7 +28,9 @@
     <!--<div>総活動日数：<%= @days %>日間</div>-->
     <div class='article-img-content'>
       <div class='article-img'>
-        <%= image_tag @article.image ,class:"article-box-img" %>
+        <%= image_tag @article.top_image ,class:"article-box-img" %>
+        <%= image_tag @article.image_1 ,class:"article-box-img" %>
+        <%= image_tag @article.image_2 ,class:"article-box-img" %>
       </div>
     </div>  
     <h3 class="title">

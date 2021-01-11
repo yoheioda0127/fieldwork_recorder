@@ -8,7 +8,9 @@ class Article < ApplicationRecord
   belongs_to        :weather
 
   def was_attached?
-    self.image.attached?
+    self.top_image.attached?
   end
   
+  
+
 end

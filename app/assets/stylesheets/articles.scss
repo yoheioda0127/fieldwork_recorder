@@ -347,18 +347,28 @@
 .article-img {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 5px 5px;
   height: 50%;
+  width: 100%;
+}
+
+.article-img-middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  object-fit: contain;
+  width: 33%;
+  height: 100%;
+  color: black;
+  padding-left: 5px;
 }
 
 .article-box-img {
   object-fit: contain;
-  width: 100%;
+  width: 96%;
   height: 96%;
-  list-style: none;
   color: black;
 }
 
@@ -424,9 +434,11 @@
   background: #FFF;
   border: solid 3px gray;/*線*/
   text-decoration: none;
+  border-radius: 10px;
 }
 .article-edit-delete:hover {
   color: black;
+  border: solid 3px black;
 }
 
 .show-back{
@@ -441,9 +453,11 @@
   background: #FFF;
   border: solid 3px gray;/*線*/
   text-decoration: none;
+  border-radius: 10px;
 }
 .show-back:hover {
   color: black;
+  border: solid 3px black;
 }
 
 .post-new-field{

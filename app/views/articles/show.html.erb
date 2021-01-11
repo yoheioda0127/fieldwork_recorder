@@ -24,14 +24,23 @@
     </div>
     <!--<div>総活動日数：<%= @days %>日間</div>-->
     <div class='article-img'>
+      <div class="article-img-middle">
       <%= image_tag @article.top_image ,class:"article-box-img" %>
+      </div>
+
       <% if @article.image_1.present?%>
+      <div class="article-img-middle">
         <%= image_tag @article.image_1 ,class:"article-box-img" %>
+      </div>
       <% end %>
+      
       <% if @article.image_2.present?%>
+      <div class="article-img-middle">
         <%= image_tag @article.image_2 ,class:"article-box-img" %>
+      </div>
       <% end %>
     </div>
+    
     <div class="location-text-box">
       <h3 class="location-text">活 動 地 域 ：</h3>
       <h3 class="location-text-data"><%= @article.location %></h3>

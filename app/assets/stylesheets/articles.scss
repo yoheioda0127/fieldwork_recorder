@@ -6,10 +6,14 @@
 
 .top-page-header{
   display: flex;
-  // position: fixed;
-  // top: 0;
-  // z-index: 100;
+  height: 15vh;
+  width: auto;
+  position: fixed;
+  top: 0;
+  z-index: 100;
   background-color: white;
+  box-shadow: 0 5px 6px rgb(179, 179, 179);
+  align-items: center;
 }
 
 .app_logo_img {
@@ -25,6 +29,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-left: 10%;
 }
 
 .user {
@@ -34,7 +39,7 @@
   color: blue;
   list-style: none;
   text-decoration: none;
-  font-size: 150%;
+  font-size: 140%;
 }
 
 .user:hover {
@@ -70,12 +75,13 @@
   padding: 0.5em 1em;
   margin: 2em 0;
   font-weight: bold;
-  color: rgb(250, 139, 158);/*文字色*/
+  color: rgb(0, 250, 125);/*文字色*/
   background: #FFF;
-  border: solid 3px rgb(250, 139, 158);/*線*/
+  border: solid 3px rgb(0, 250, 125);/*線*/
   border-radius: 10px;/*角の丸み*/
   text-decoration: none;
   font-size: 150%;
+  box-shadow: 0 5px 6px rgb(179, 179, 179);
 }
 .post-article:hover {
   text-decoration: underline;
@@ -112,6 +118,7 @@
 .head_img {
   width: 100vw;
   height: 65vh;
+  padding-top: 6%;
   text-decoration: none;
 }
 //ヘッダー部分↑
@@ -126,6 +133,14 @@
 }
 
 //投稿部分↓
+.time-line-word {// 「タイムライン」の文字
+  display: flex;
+  justify-content: center;
+  font-size: 250%;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
 .content_post {
   list-style: none;
   display: flex;
@@ -139,51 +154,80 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 10px;
+  width: 30%;
 }
 .active-all:hover {
   color: gray;
 }
 
 .content-part {
-  width: 25vw;
+  height: 70vh;
+  width: auto;
 }
 
-
-.title {
+.title-box {
+  height: 8%;
+  width: auto;
   display: flex;
   justify-content: center;
-  font-size: 120%;
+}
+
+.title {
+  font-size: 160%;
+  padding-bottom: 20px;
+}
+
+.content-major {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.major-word {
+  display: flex;
+  justify-content: center;
+  height: 4%;
+  width: 300px;
+  border: solid 1px black;
+  border-radius: 20px;
 }
 
 .active-day {
   display: flex;
   justify-content: center;
   font-size: 110%;
+  height: 4%;
+  align-items: center;
 }
 .activeday:hover {
   color: gray;
 }
 
-.active-img {
+.second-area{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.activity_image {
-  width: 27vw;
-  height: 31vh;
-  list-style: none;
-  color: black;
+.second-left{
+  padding-right: 40px;
 }
 
 .personal {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 13%;
+  align-items: center;
 }
 
 .avatar {
-  display: flex;
-  justify-content: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  margin-right: 15px;
 }
 
 .content_user_name {
@@ -191,20 +235,22 @@
   justify-content: center;
 }
 
-.other-info {
-  
-}
-
-.content-major {
+.top-img {
   display: flex;
   justify-content: center;
-  background-color: gray;
-  color: white;
+  height: 65%;
+  align-items: center;
+  background-color: grey;
+  margin-top: 10px;
 }
 
-.content-all-day {
-  display: flex;
-  justify-content: center;
+.activity_top_image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  color: black;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.452);
 }
 
 //投稿部分↑
@@ -221,12 +267,30 @@
 
 .article-box {
   background-color: lightgrey;
+  margin-top: 15vh;
+  height: 85vh;
+  box-shadow: 0 5px 6px rgb(139, 139, 139);
 }
 
-.title-box {
+
+.title-text {
+  padding-top: 5px;
   display: flex;
   justify-content: center;
-  font-size: 150%;
+  font-size: 200%;
+}
+
+.second-banner {
+  height: 6%;
+  display: flex;
+  justify-content: center;
+}
+
+.second-banner-left {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .date-box {
@@ -236,6 +300,7 @@
 }
 
 .date-text {
+  padding-right: 30px;
   display: flex;
   font-family: sans-serif;
   justify-content: center;
@@ -245,6 +310,7 @@
 }
 
 .weather-text {
+  padding-right: 30px;
   display: flex;
   font-family: sans-serif;
   justify-content: center;
@@ -254,26 +320,96 @@
 }
 
 .user-info {
+  width: 45%;
   display: flex;
   font-family: sans-serif;
-  justify-content: center;
+  justify-content: flex-start;
   list-style: none;
   text-decoration: none;
   font-size: 120%;
+  align-items: center;
+  padding-left: 20px;
+
 }
 
-.article-img-content {
+.user_name {
+  padding-left : 10px;
+}
+
+.avatar-box-img {
+  height: 70px;
+  width: 70px;
+  align-items: center;
+  border-radius: 50px;
+}
+
+
+.article-img {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 5px 5px;
+  height: 50%;
 }
 
 .article-box-img {
-  width: 27vw;
-  height: 31vh;
+  object-fit: contain;
+  width: 100%;
+  height: 96%;
   list-style: none;
   color: black;
+}
+
+.location-text-box{
+  display: flex;
+  height: 5%;
+  align-items: center;
+}
+
+.location-text{
+  margin-left: 40px;
+  width: 220px;
+}
+.location-text-data{
+  margin-right: 40px;
+}
+
+.memo-text-box{
+  display: flex;
+  align-items: center;
+  height: 15%;
+}
+
+.memo-text{
+  margin-left: 40px;
+  width: 220px;
+}
+
+.memo-text-data{
+  margin-right: 40px;
+}
+
+.appeal-point-text-box{
+  display: flex;
+  align-items: center;
+  height: 15%;
+}
+
+.appeal-point-text{
+  margin-left: 40px;
+  width: 220px;
+}
+
+.appeal-point-text-data {
+  padding-right: 40px;
+}
+
+.show-bottom {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 35%;
 }
 
 .article-edit-delete {
@@ -281,9 +417,6 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-}
-
-.footer-edit {
   padding: 0.5em 1em;
   margin: 2em 0;
   font-weight: bold;
@@ -292,6 +425,27 @@
   border: solid 3px gray;/*線*/
   text-decoration: none;
 }
-.footer-edit:hover {
+.article-edit-delete:hover {
   color: black;
+}
+
+.show-back{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  color: gray;/*文字色*/
+  background: #FFF;
+  border: solid 3px gray;/*線*/
+  text-decoration: none;
+}
+.show-back:hover {
+  color: black;
+}
+
+.post-new-field{
+  padding-top: 15%;
 }

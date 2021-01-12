@@ -1,3 +1,42 @@
-p {
-  padding-top: 15vh;
+/* SHOW */
+.prof-box {
+  height: 75vh;
+}
+
+h1 {
+  padding-top : 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 250%;
+}
+
+.prof-personal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 13%;
+}
+
+.prof-avatar-data {
+  object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.prof_user_name {
+  font-size: 170%;
+}
+
+.count-day-box {
+  padding-left: 80px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.count-day {
+  font-size: 150%;
+  color: red;
 }

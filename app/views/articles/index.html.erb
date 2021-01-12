@@ -12,21 +12,21 @@
           <h2 class = "title"><b><%= article.title %></b></h2>
         </div>
         <div class="second-area">
-          <div class="second-left">
-            <div class = "content-major">
-                <div class="major-word"><b>記事ジャンル：<%= article.user.major.name %>系</b></div>
+          <div class="personal">
+            <div class="index-avatar-box">
+              <%= image_tag article.user.avatar, class: 'index-avatar' %>
             </div>
-            <div class = "active-day">
-              <div >活動日：<%= article.activity_date %></div>
-            </div>
-          </div>
-          <div class = "personal">
-            <div class="avatar">
-              <div ><%= image_tag article.user.avatar, class: 'avatar' %></div>
-            </div>
+          <div class = "second-right">
             <div class="content_user_name">
               <div ><b><%= article.user.name %></b></div>
             </div>
+            <div class = "content-major">
+                <div class="major-word">ジャンル：<b><%= article.user.major.name %>系</b></div>
+            </div>
+            <div class = "index-active-day">
+              <div >活動日：<%= article.activity_date %></div>
+            </div>
+          </div>
           </div> 
         </div>
 

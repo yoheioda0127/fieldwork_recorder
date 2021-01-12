@@ -2,8 +2,11 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def application
-    @user = User.find(params[:id])
-    
+    @article = Article.find(params[:id])
+    def activity
+      (Article.count).to_s
+    end
+    @days = activity
   end
 
   private

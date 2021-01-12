@@ -1,3 +1,46 @@
-<p>MyPage</p>
+<div class="prof-box">
+      <h1>プロフィール</h1>
+      <div class = "prof-personal">
+        <div class="prof-avatar">
+          <%= image_tag @user.avatar, class: 'prof-avatar-data' %>
+        </div>
+        <h2 class="prof_user_name"><b><%= @user.name %></b></h2>
+        <div class= "count-day-box">
+          <h3>活動日数 <b class= "count-day"><%=@user.articles.count.to_s%></b> 日間<h3>
+        </div>
+      </div> 
+</div>
 
- <%= @user.name %>
+<div>
+    <h1 class = "time-line-word" ><b>タイムライン</b></h1>
+    <div class="content_post">
+    <% @articles.each do |article| %>
+    <% if article.top_image.present?%>
+    <% if article.user_id == @user.id%>
+    <%= link_to article_path(article.id), class: "active-all" do %>
+      <div class = "content-part">
+        <div class="title-box">
+          <h2 class = "title"><b><%= article.title %></b></h2>
+        </div>
+        <div class="second-area">
+          <div class="second-left">
+            <div class = "content-major">
+                <div class="major-word">記事ジャンル：<b><%= article.user.major.name %>系</b></div>
+            </div>
+            <div class = "active-day">
+              <div >活動日：<%= article.activity_date %></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-img">
+          <%= image_tag article.top_image, class: 'activity_top_image' %>
+        </div>
+
+      </div>
+    <% end %>
+    <% end %>
+    <% end %>
+    <% end %>
+    </div>
+</div>

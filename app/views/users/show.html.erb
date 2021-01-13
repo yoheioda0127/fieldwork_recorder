@@ -1,4 +1,5 @@
-<div class="prof-box">
+<div class="asset-box">
+    <div class="prof-box">
       <h1>プロフィール</h1>
       <div class = "prof-personal">
         <div class="prof-avatar">
@@ -9,9 +10,8 @@
           <h3>活動日数 <b class= "count-day"><%=@user.articles.count.to_s%></b> 日間<h3>
         </div>
       </div> 
-</div>
+    </div>
 
-<div class="asset-box">
     <h1 class = "user-show-time-line-word" ><b>タイムライン</b></h1>
     <div class="user-show-content-post-back">
     <% @articles.each do |article| %>

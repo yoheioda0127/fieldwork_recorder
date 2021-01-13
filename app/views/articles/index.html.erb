@@ -1,42 +1,41 @@
-<div class="contents row">
+<div class="contents-row">
   <%= link_to image_tag("adventure.png", class: "head_img"), "#" %>
 
-  <h1 class = "time-line-word" ><b>タイムライン</b></h1>
-
-  <div class="content_post">
-  <% @articles.each do |article| %>
-    <% if article.top_image.present?%>
-    <%= link_to article_path(article.id), class: "active-all" do %>
-      <div class = "content-part">
-        <div class="title-box">
-          <h2 class = "title"><b><%= article.title %></b></h2>
-        </div>
-        <div class="second-area">
-          <div class="personal">
-            <div class="index-avatar-box">
-              <%= image_tag article.user.avatar, class: 'index-avatar' %>
-            </div>
-          <div class = "second-right">
-            <div class="content_user_name">
-              <div ><b><%= article.user.name %></b></div>
-            </div>
-            <div class = "content-major">
-                <div class="major-word">ジャンル：<b><%= article.user.major.name %>系</b></div>
-            </div>
-            <div class = "index-active-day">
-              <div >活動日：<%= article.activity_date %></div>
-            </div>
+  <div class="index-time-line">
+    <h1 class = "time-line-word" ><b>タイムライン</b></h1>
+    <div class="content-post">
+      <% @articles.each do |article| %>
+      <% if article.top_image.present?%>
+      <%= link_to article_path(article.id), class: "active-all" do %>
+        <div class = "content-part">
+          <div class="title-box">
+            <h2 class = "title"><b><%= article.title %></b></h2>
           </div>
-          </div> 
-        </div>
+          <div class="second-area">
+              <div class="index-avatar-box">
+                <%= image_tag article.user.avatar, class: 'index-avatar' %>
+              </div>
+            <div class = "second-right">
+              <div class="content_user_name">
+               <div ><b><%= article.user.name %></b></div>
+              </div>
+              <div class = "content-major">
+                  <div class="major-word"><b><%= article.user.major.name %>系</b></div>
+              </div>
+              <div class = "index-active-day">
+                <div >活動日：<%= article.activity_date %></div>
+              </div>
+            </div> 
+          </div>
 
-        <div class="top-img">
-          <%= image_tag article.top_image, class: 'activity_top_image' %>
-        </div>
+          <div class="top-img">
+            <%= image_tag article.top_image, class: 'activity_top_image' %>
+          </div>
 
-      </div>
-    <% end %>
-    <% end %>
-  <% end %>
+        </div>
+      <% end %>
+      <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -41,7 +41,7 @@
   color: black;
   list-style: none;
   text-decoration: none;
-  font-size: 140%;
+  font-size: 130%;
 }
 
 .user:hover {
@@ -76,12 +76,12 @@
   justify-content: flex-end;
   padding: 0.5em 1em;
   font-weight: bold;
-  color: rgb(0, 250, 125);/*文字色*/
+  color: rgb(0, 201, 100);/*文字色*/
   background: #FFF;
-  border: solid 3px rgb(0, 250, 125);/*線*/
+  border: solid 3px rgb(0, 201, 100);/*線*/
   border-radius: 10px;/*角の丸み*/
   text-decoration: none;
-  font-size: 150%;
+  font-size: 140%;
   box-shadow: 0 5px 6px rgb(179, 179, 179);
 }
 .post-article:hover {
@@ -116,5 +116,5 @@
 }
 
 .wrap-header {
-  height: 13.5vh;
+  height: 12.5vh;
 }

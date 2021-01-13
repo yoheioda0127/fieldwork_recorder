@@ -11,36 +11,35 @@
       </div> 
 </div>
 
-<div>
-    <h1 class = "time-line-word" ><b>タイムライン</b></h1>
-    <div class="content_post">
+<div class="asset-box">
+    <h1 class = "user-show-time-line-word" ><b>タイムライン</b></h1>
+    <div class="user-show-content-post-back">
     <% @articles.each do |article| %>
     <% if article.top_image.present?%>
     <% if article.user_id == @user.id%>
     <%= link_to article_path(article.id), class: "active-all" do %>
-      <div class = "content-part">
-        <div class="title-box">
-          <h2 class = "title"><b><%= article.title %></b></h2>
-        </div>
-        <div class="second-area">
-          <div class="second-left">
-            <div class = "content-major">
-                <div class="major-word">記事ジャンル：<b><%= article.user.major.name %>系</b></div>
-            </div>
-            <div class = "active-day">
-              <div >活動日：<%= article.activity_date %></div>
-            </div>
+      <div class = "user-show-content-part">
+          <div class="title-box">
+            <h2 class = "title"><b><%= article.title %></b></h2>
           </div>
-        </div>
+          <div class="user-show-second-area">
+            <div class = "second-right">
+              <div class = "user-show-content-major">
+                  <div class="major-word"><b>ジャンル：<%= article.user.major.name %>系</b></div>
+              </div>
+              <div class = "user-show-index-active-day">
+                <div >活動日：<%= article.activity_date %></div>
+              </div>
+            </div> 
+          </div>
 
-        <div class="top-img">
-          <%= image_tag article.top_image, class: 'activity_top_image' %>
-        </div>
+          <div class="user-show-top-img">
+            <%= image_tag article.top_image, class: 'activity_top_image' %>
+          </div>
 
-      </div>
+        </div>
     <% end %>
     <% end %>
     <% end %>
     <% end %>
-    </div>
 </div>

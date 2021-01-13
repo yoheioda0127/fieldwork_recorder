@@ -1,7 +1,7 @@
 <div class="asset-box">
-    <div class="prof-box">
-      <h1>プロフィール</h1>
-      <div class = "prof-personal">
+    <div class="asset-prof-box">
+      <h1 class="asset-h1">プロフィール</h1>
+      <div class = "asset-prof-personal">
         <div class="prof-avatar">
           <%= image_tag @user.avatar, class: 'prof-avatar-data' %>
         </div>
@@ -9,9 +9,22 @@
         <div class= "count-day-box">
           <h3>活動日数 <b class= "count-day"><%=@user.articles.count.to_s%></b> 日間<h3>
         </div>
+      </div>
+      <div class="second-prof-box">
+        <div class= "user-show-major-word">
+          <h3>専攻分野 ：<b><%= @user.major.name %>系</b><h3>
+        </div>
+        <div class= "user-show-research-word">
+          <h3>研究テーマ ：<b><%= @user.research_theme %></b><h3>
+        </div>
+        <div class= "user-show-intro-word">
+          <h3>自己紹介 ：<%= @user.introduction %><h3>
+        </div>
       </div> 
     </div>
 
+
+  <div class="asset-article-box">
     <h1 class = "user-show-time-line-word" ><b>タイムライン</b></h1>
     <div class="user-show-content-post-back">
     <% @articles.each do |article| %>
@@ -42,4 +55,5 @@
     <% end %>
     <% end %>
     <% end %>
+  </div>
 </div>

@@ -1,5 +1,6 @@
-<div class="article-box">
-    <h2 class="title-text">
+<div class="article-back-space">
+  <div class="article-box">
+    <h2 class="article-show-title-text">
       <%= @article.title %>
     </h2>
     <div class="second-banner">
@@ -16,13 +17,12 @@
         </div>
       </div>
       <div class = "user-info">
-        <%= image_tag @article.user.avatar.variant(resize:'50x50') ,class:"avatar-box-img" %>
+        <%= image_tag @article.user.avatar,class:"avatar-box-img" %>
         <h3 class="user_name">
           <%= @article.user.name %>
         </h3>
       </div>
     </div>
-    <!--<div>総活動日数：<%= @days %>日間</div>-->
     <div class='article-img'>
       <div class="article-img-middle">
       <%= image_tag @article.top_image ,class:"article-box-img" %>
@@ -40,21 +40,23 @@
       </div>
       <% end %>
     </div>
+    <!--<div>総活動日数：<%= @days %>日間</div>-->
     
     <div class="location-text-box">
       <h3 class="location-text">活 動 地 域 ：</h3>
       <h3 class="location-text-data"><%= @article.location %></h3>
     </div>
     <div class="memo-text-box">
-      <h3 class="memo-text">活 動 メ モ :</h3>
+      <h3 class="memo-text">活 動 メ モ ：</h3>
       <h3 class="memo-text-data"><%= @article.memo %></h3>
     </div>
     <div class="appeal-point-text-box">
-      <h3 class="appeal-point-text">アピールポイント：</h3>
+      <h3 class="appeal-point-text">アピールポイント ：</h3>
       <h3 class="appeal-point-text-data"><%= @article.appeal_point %></h3>
     </div>
-    <div class ="show-bottom">
+  </div>
+  <div class ="show-bottom">
       <%= link_to "記事の編集・削除を行う", edit_article_path(@article.id), class: "article-edit-delete" %>
       <%= link_to "TOPへ戻る", :back  ,class: "show-back"%>
-    </div>
+  </div>
 </div>

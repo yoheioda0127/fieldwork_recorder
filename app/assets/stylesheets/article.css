@@ -361,16 +361,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  
-}
-
-.new-edit-delete-word {
-  
-}
-
-.post-new-edit-field {
-  
+  justify-content: flex-start;  
 }
 
 .new-edit-title {

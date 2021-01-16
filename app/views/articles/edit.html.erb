@@ -7,7 +7,7 @@
 
     <div class="field">
       <%= f.label :"タイトル" %><span>（必須）</span><br />
-      <%= f.text_field :title, autofocus: true, placeholder: "記事タイトル", autocomplete: "title" %>
+      <%= f.text_field :title, autofocus: true, placeholder: "記事タイトル", autocomplete: "title", class: "field-1" %>
     </div>
 
     <div class="form-group">
@@ -16,51 +16,53 @@
         <span class="indispensable">（必須）</span>
       </div>
       <div class='input-active-date-wrap'>
-        <%= raw sprintf(f.date_select(:activity_date, class:'select-birth', id:"activity_date", use_month_numbers: true, prompt:'--', start_year: 1930, end_year: (Time.now.year), date_separator: '%s'), "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+        <%= raw sprintf(f.date_select(:activity_date, class: 'field-4', id:"activity_date", use_month_numbers: true, prompt:'--', start_year: 1930, end_year: (Time.now.year), date_separator: '%s'), "<p>　年　</p>", "<p>　月　</p>") + "<p>　日　</p>" %>
       </div>
     </div>
 
-    <div class="image">
-      <div class="act_image">
+    <div class="new-edit-image">
+      <div class="act_image_word">
         活動写真（3枚まで）
       </div>
       <div class="act_image">
-        <label>画像①（※必須）</label><%= f.file_field :top_image, id:"act_top_image" %>
-        <label>画像②</label><%= f.file_field :image_1, id:"act_image_1" %>
-        <label>画像③</label><%= f.file_field :image_2, id:"act_image_2" %>
+        <div class = "act_image_data" ><label>画像①（※必須）</label><br><%= f.file_field :top_image, id:"act_top_image" %></div>
+        <div class = "act_image_data" ><label>画像②</label><br><%= f.file_field :image_1, id:"act_image_1" %></div>
+        <div class = "act_image_data" ><label>画像③</label><br><%= f.file_field :image_2, id:"act_image_2" %></div>
       </div>
     </div>
 
-    <div class="weight-bold-text">
+    <div class="new-edit-weather">
       当日の天気
     </div>
-    <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather_id"}) %>
+    <div class="weight-bold-text">
+      <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "field-3", id:"weather_id"}) %>
+    </div>
 
-    <div class="field">
+    <div class="new-edit-location">
       <%= f.label :"調査地" %><br />
-      <%= f.text_field :location, autocomplete: "location" %>
+      <%= f.text_field :location, autocomplete: "location", class: "field-1" %>
     </div>
 
-    <div class="field">
+    <div class="new-edit-memo">
       <%= f.label :"活動メモ" %><br />
-      <%= f.text_area :memo, autocomplete: "memo" %>
+      <%= f.text_area :memo, autocomplete: "memo", class: "field-2" %>
     </div>
 
-    <div class="field">
+    <div class="new-edit-appeal">
       <%= f.label :"アピールポイント" %><br />
-      <%= f.text_area :appeal_point, autocomplete: "appeal_point" %>
+      <%= f.text_area :appeal_point, autocomplete: "appeal_point", class: "field-2" %>
     </div>
 
     <div class="actions">
-      <%= f.submit "更新する" %>
+      <%= f.submit "更新する", class: "new-edit-actions" %>
     </div>
   <% end %>
   </div>
 
-  <div class="delete-area">
-    <h3 class="delete-word">記事の削除</h3>
-    <p>記事を削除しますか? <%= button_to "記事を削除", article_path(@article.id), data: { confirm: "記事を削除しますか?" }, method: :delete %></p>
-    <%= link_to "戻る", :back %>
+  <div class="delete-area-box">
+    <h3 class="delete-word">この記事を削除する</h3>
+    <div><%= button_to "削除", article_path(@article.id), class: "delete-button", data: {confirm: "記事を削除しますか?"}, method: :delete %></div>
+    <%= link_to "TOPへ戻る", :back, class: "back-to-top" %>
   </div>
 
 </div>

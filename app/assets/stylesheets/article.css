@@ -21,6 +21,7 @@
   display: flex;
   justify-content: space-around;
   width: 1400px;
+  flex-wrap: wrap;
 }
 
 .active-all{
@@ -354,7 +355,8 @@
   padding-top: 15%;
 }
 
-/* 新規登録・編集 */
+
+/* new・edit画面 */
 .new-back-ground {
   display: flex;
   flex-direction: column;
@@ -377,15 +379,149 @@
 
 .new-edit-field {
   width: 1100px;
-  
+}
+
+.form-text-wrap{
+  padding-top: 50px;
 }
 
 .input-active-date-wrap {
+  margin-left: 50px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.delete-area {
+.new-edit-image{
+  padding-top: 50px;
+}
+
+.act_image {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.new-edit-weather{
+  padding-top: 50px;
+}
+
+.new-edit-location {
+  padding-top: 50px;
+}
+
+.new-edit-memo{
+  padding-top: 50px;
+}
+
+.new-edit-appeal{
+  padding-top: 50px;
+}
+
+.field-1 {
+  width: 1000px;
+  height: 50px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+
+.field-2 {
+  width: 1000px;
+  height: 100px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.field-3 {
+  width: 180px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.field-4 {
+  appearance: none;
+  background-color: indianred;
+}
+
+.activity_date {
+  width: 180px;
+  height: 50px;
+  font-size: 40px;
+  border-radius: 10px;
+  background-color: indianred;
+}
+
+.new-edit-actions{
+  font-size: 15px;
+  width: 250px;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(30, 133, 35);
+  border: solid 2px rgb(18, 85, 21);/*線*/
+  text-decoration: none;
+  border-radius: 10px;
+}
+.new-edit-actions:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.452);
+}
+
+.delete-area-box {
+  padding-top: 30px;
   width: 1100px;
+}
+
+.delete-button {
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
+  font-weight: bold;
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(248, 53, 53);
+  border: solid 2px rgb(179, 38, 38);/*線*/
+  text-decoration: none;
+  border-radius: 10px;
+}
+.delete-button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.452);
+}
+
+.back-to-top  {
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
+  font-weight: bold;
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(122, 121, 121);
+  border: solid 2px rgb(105, 105, 105);/*線*/
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.back-to-top:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.452);
 }

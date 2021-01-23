@@ -10,14 +10,14 @@
       <%= f.label :メールアドレス %><br />
     </div>
     <div>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-5" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "　（例）field-recorder@gmail.com", class: "field-5" %>
     </div>
   </div>
 
   <div class="user-new-resi-field">
     <div>
       <%= f.label :パスワード %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "field-5" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "　　パスワードは半角英数です。", class: "field-5" %>
     </div>
   </div>
 

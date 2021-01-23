@@ -6,7 +6,7 @@
 
   <div class="user-new-resi-field">
     <%= f.label :"名前 or ニックネーム" %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "field-5" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "　（例）山田 太郎", class: "field-5" %>
   </div>
 
 
@@ -21,7 +21,7 @@
 
   <div class="user-new-resi-field">
     <%= f.label :"メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-5" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "　（例）field-recorder@gmail.com", class: "field-5" %>
   </div>
 
   <div class="user-new-resi-field">
@@ -30,13 +30,13 @@
       <% if @minimum_password_length %>
       （※<%= @minimum_password_length %> 文字以上）
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password", class: "field-5" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "　半角英数", class: "field-5" %>
     </div>
   </div>
 
   <div class="user-new-resi-field">
     <%= f.label :"確認用" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "field-5" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "　半角英数", class: "field-5" %>
   </div>
 
   <div class="user-new-resi-field">
@@ -51,7 +51,7 @@
 
   <div class="user-new-resi-field">
     <%= f.label :"現在の所属（学校、会社など）" %><br />
-    <%= f.text_field :school_and_company, autocomplete: "school_and_company", class: "field-5" %>
+    <%= f.text_field :school_and_company, autocomplete: "school_and_company", placeholder: "　（例）フィールド大学理学部地球科学科地質学専攻　堆積学研究室", class: "field-5" %>
   </div>
 
   <div class="user-new-resi-field">
@@ -61,12 +61,12 @@
 
   <div class="user-new-resi-field">
     <%= f.label :"現在の研究テーマ" %><br />
-    <%= f.text_field :research_theme, autocomplete: "research_theme", class: "field-1" %>
+    <%= f.text_field :research_theme, autocomplete: "research_theme", placeholder: "　（例）新潟県長岡市小国地域に分布する魚沼層群の地質構造", class: "field-1" %>
   </div>
 
   <div class="user-new-resi-field">
     <%= f.label :"自己紹介" %><br />
-    <%= f.text_area :introduction, autocomplete: "introduction", class: "field-2" %>
+    <%= f.text_area :introduction, autocomplete: "introduction", placeholder: "（例）はじめまして、堆積学を専攻している大学２年生です。アウトプットの場を増やそうとアプリをはじめました。気合と突き進む力なら誰にも負けません！よろしくお願いいたします。", class: "field-2" %>
   </div>
 
   <div class="user-new-resi-field">

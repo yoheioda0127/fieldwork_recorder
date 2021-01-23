@@ -1,64 +1,59 @@
-<h2 class="post-new-field">活動記事投稿</h2>
+<div class="new-back-ground">
+  <div class="new-edit-field">
+    <h2 class="post-new-edit-field">活動記事投稿</h2>
+    <%= form_for(@article) do |f| %>
 
-<%= form_for(@article) do |f| %>
+      <div class="field">
+        <%= f.label :"タイトル" %><span>（必須）</span><br />
+        <%= f.text_field :title, autofocus: true, placeholder: "記事タイトル", autocomplete: "title", class: "field-1" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :"タイトル" %><br />
-    <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
-  </div>
+      <div class="form-group">
+        <div class='form-text-wrap'>
+          <label class="form-text">調査日時</label>
+          <span class="indispensable">（必須）</span>
+        </div>
+        <div class='input-active-date-wrap'>
+        <%= raw sprintf(f.date_select(:activity_date, class: 'field-4', id:"activity_date", use_month_numbers: true, prompt:'--', start_year: 1930, end_year: (Time.now.year), date_separator: '%s'), "<p>　年　</p>", "<p>　月　</p>") + "<p>　日　</p>" %>
+      </div>
+      </div>
 
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">調査日時</label>
-      <span class="indispensable">必須</span>
+      <div class="new-edit-image">
+        <div class="act_image_word">
+          活動写真（3枚まで）
+        </div>
+        <div class="act_image">
+          <div class = "act_image_data" ><label>画像①（※必須）</label><br><%= f.file_field :top_image, id:"act_top_image" %></div>
+          <div class = "act_image_data" ><label>画像②</label><br><%= f.file_field :image_1, id:"act_image_1" %></div>
+          <div class = "act_image_data" ><label>画像③</label><br><%= f.file_field :image_2, id:"act_image_2" %></div>
+        </div>
+      </div>
+
+      <div class="new-edit-weather">
+        当日の天気
+      </div>
+      <div class="weight-bold-text">
+        <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "field-3", id:"weather_id"}) %>
+      </div>
+
+      <div class="new-edit-location">
+        <%= f.label :"調査地" %><br />
+        <%= f.text_field :location, autocomplete: "location", class: "field-1" %>
+      </div>
+
+      <div class="new-edit-memo">
+        <%= f.label :"活動メモ" %><br />
+        <%= f.text_area :memo, autocomplete: "memo", class: "field-2" %>
+      </div>
+
+      <div class="new-edit-appeal">
+        <%= f.label :"アピールポイント" %><br />
+        <%= f.text_area :appeal_point, autocomplete: "appeal_point", class: "field-2" %>
+      </div>
+
+    <div class="actions">
+      <%= f.submit "投稿する", class: "new-edit-actions" %>
     </div>
-    <div class='input-birth-wrap'>
-      <%= raw sprintf(
-        f.date_select(
-        :activity_date,
-        class:'select-birth',
-        id:"activity_date",
-        use_month_numbers: true,
-        prompt:'--',
-        start_year: 1930,
-        end_year: (Time.now.year),
-        date_separator: '%s'),
-      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
+  <% end %>
   </div>
-
-  <div class="image">
-    <div class="act_image">
-      活動写真（3枚まで）
-    </div>
-    <div class="act_image">
-      <%= f.file_field :top_image, id:"act_top_image" %>
-      <%= f.file_field :image_1, id:"act_image_1" %>
-      <%= f.file_field :image_2, id:"act_image_2" %>
-    </div>
-  </div>
-
-  <div class="weight-bold-text">
-    当日の天気
-  </div>
-  <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class:"select-box", id:"weather_id"}) %>
-
-  <div class="field">
-    <%= f.label :"調査地" %><br />
-    <%= f.text_field :location, autocomplete: "location" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"活動メモ" %><br />
-    <%= f.text_area :memo, autocomplete: "memo" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"アピールポイント" %><br />
-    <%= f.text_area :appeal_point, autocomplete: "appeal_point" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "投稿する" %>
-  </div>
-<% end %>
+</div>

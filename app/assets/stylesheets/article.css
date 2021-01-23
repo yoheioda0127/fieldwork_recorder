@@ -85,7 +85,7 @@
 }
 
 .content_user_name {
-  font-size: 120%;
+  font-size: 100%;
 }
 
 .content-major{
@@ -202,9 +202,16 @@
 
 }
 
-.user_name {
-  padding-left : 10px;
+.link_user_name {
+  font-size: 120%;
+  text-decoration: none;
+  color: black;
+  padding-left: 10px;
 }
+.link_user_name:hover {
+  color: blue;
+}
+
 
 .avatar-box-img {
   object-fit: cover;
@@ -261,8 +268,8 @@
   font-size: 100%;
 }
 .location-text-data{
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 30px;
+  margin-left: 96px;
 }
 
 .memo-text-box{
@@ -280,8 +287,8 @@
 }
 
 .memo-text-data{
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 30px;
+  margin-left: 28px;
 }
 
 .appeal-point-text-box{

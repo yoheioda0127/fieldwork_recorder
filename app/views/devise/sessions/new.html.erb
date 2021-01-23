@@ -15,8 +15,10 @@
   </div>
 
   <div class="user-new-resi-field">
-    <%= f.label :"メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-5" %>
+    <div>
+      <%= f.label :パスワード %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class: "field-5" %>
+    </div>
   </div>
 
   <% if devise_mapping.rememberable? %>

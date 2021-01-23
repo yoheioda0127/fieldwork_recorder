@@ -1,3 +1,39 @@
-.new-person {
-  padding-top: 200px;
+/* 新規ユーザー登録画面 */
+
+.new-user-back-ground{
+  margin: 0 auto;
+  width: 1050px;
 }
+
+.new-person {
+  padding-top: 100px;
+}
+
+.input-active-date-wrap {
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user-new-resi-field{
+  padding-top: 30px;
+}
+
+/* 新規ユーザー登録画面 */
+
+/* ログイン画面 */
+.login-back-ground{
+  margin: 0 auto;
+  width: 600px;
+}
+
+.check-remember {
+  padding: 40px 0;
+}
+
+.login-page-title {
+  padding-top: 15vh;
+}
+
+/* ログイン画面 */

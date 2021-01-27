@@ -254,6 +254,8 @@
   color: black;
 }
 
+
+
 .location-text-box{
   display: flex;
   align-items: center;
@@ -263,16 +265,21 @@
   justify-content: flex-start;
 }
 
-.location-text{
+.location-text-pack{
   display: flex;
   justify-content: center;
   margin-left: 20px;
   font-size: 80%;
-  width: 150px;
+  width: 300px;
+}
+
+.location-text{
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
 }
 .location-text-data{
   padding-right: 10px;
-  margin-left: 15px;
   font-size: 20px;
 }
 
@@ -284,17 +291,22 @@
   justify-content: flex-start;
 }
 
+.memo-text-pack{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  font-size: 80%;
+  width: 300px;
+}
+
 .memo-text{
   display: flex;
   justify-content: center;
-  margin-left: 30px;
-  width: 320px;
-  font-size: 80%;
+  font-size: 22px;
 }
 
 .memo-text-data{
   padding-right: 10px;
-  margin-left: 40px;
   font-size: 20px;
 }
 
@@ -306,12 +318,18 @@
   height: 10%;
 }
 
+.appeal-point-text-pack{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  font-size: 80%;
+  width: 300px;
+}
+
 .appeal-point-text{
   display: flex;
   justify-content: center;
-  margin-left: 5px;
-  font-size: 80%;
-  width: 320px;
+  font-size: 22px;
 }
 
 .appeal-point-text-data {

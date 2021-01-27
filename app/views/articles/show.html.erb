@@ -43,15 +43,21 @@
     <!--<div>総活動日数：<%= @days %>日間</div>-->
     
     <div class="location-text-box">
-      <h3 class="location-text">活動地域：</h3>
+      <div class="location-text-pack">
+        <h2 class="location-text">活動地域：</h2>
+      </div>
       <h3 class="location-text-data"><%= @article.location %></h3>
     </div>
     <div class="memo-text-box">
-      <h3 class="memo-text">活動メモ：</h3>
+      <div class="memo-text-pack">
+        <h2 class="memo-text">活動メモ：</h2>
+      </div>
       <h3 class="memo-text-data"><%= @article.memo %></h3>
     </div>
     <div class="appeal-point-text-box">
-      <h3 class="appeal-point-text">アピールポイント：</h3>
+      <div class="appeal-point-text-pack">
+        <h2 class="appeal-point-text">アピールポイント：</h2>
+      </div>
       <h3 class="appeal-point-text-data"><%= @article.appeal_point %></h3>
     </div>
   </div>

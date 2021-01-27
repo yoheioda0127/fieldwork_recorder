@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates :birthday
   end
 
-  validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i, message: 'は半角英数字を使用してください！！' }
+  validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
 
   def was_attached?
     self.avatar.attached?

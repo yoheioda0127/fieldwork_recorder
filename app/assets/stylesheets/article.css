@@ -264,12 +264,16 @@
 }
 
 .location-text{
-  margin-left: 40px;
-  font-size: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+  font-size: 80%;
+  width: 150px;
 }
 .location-text-data{
-  margin-right: 30px;
-  margin-left: 96px;
+  padding-right: 10px;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 .memo-text-box{
@@ -281,14 +285,17 @@
 }
 
 .memo-text{
-  margin-left: 40px;
-  width: 220px;
-  font-size: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  width: 320px;
+  font-size: 80%;
 }
 
 .memo-text-data{
-  margin-right: 30px;
-  margin-left: 28px;
+  padding-right: 10px;
+  margin-left: 40px;
+  font-size: 20px;
 }
 
 .appeal-point-text-box{
@@ -300,13 +307,16 @@
 }
 
 .appeal-point-text{
-  margin-left: 40px;
-  font-size: 100%;
-  width: 220px;
+  display: flex;
+  justify-content: center;
+  margin-left: 5px;
+  font-size: 80%;
+  width: 320px;
 }
 
 .appeal-point-text-data {
   padding-right: 10px;
+  font-size: 20px;
 }
 
 .show-bottom {

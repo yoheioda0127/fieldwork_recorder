@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :basic_auth
 
   def application
     @article = Article.find(params[:id])
@@ -13,5 +14,11 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :avatar, :email, :encrypted_password, :birthday, :school_and_company, :major_id, :research_theme, :introduction])
+  end
+
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'field' && password == '3434'
+    end
   end
 end

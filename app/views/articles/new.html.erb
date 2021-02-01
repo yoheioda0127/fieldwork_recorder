@@ -5,7 +5,7 @@
 
       <div class="field">
         <%= f.label :"タイトル" %><span>（必須）</span><br />
-        <%= f.text_field :title, autofocus: true, placeholder: "　（例）初めての魚沼層群の調査", autocomplete: "title", class: "field-1" %>
+        <%= f.text_field :title, autofocus: true, placeholder: "　（例）初めての魚沼層群の調査　※30文字以内", autocomplete: "title", class: "field-1" %>
       </div>
 
       <div class="form-group">
@@ -38,17 +38,17 @@
 
       <div class="new-edit-location">
         <%= f.label :"調査地" %><br />
-        <%= f.text_field :location, autocomplete: "location", placeholder: "　（例）新潟県長岡市小国町　芝之又川", class: "field-1" %>
+        <%= f.text_field :location, autocomplete: "location", placeholder: "　（例）新潟県長岡市小国町　芝之又川　※45文字以内", class: "field-1" %>
       </div>
 
       <div class="new-edit-memo">
         <%= f.label :"活動メモ" %><br />
-        <%= f.text_area :memo, autocomplete: "memo", placeholder: "　（例）露頭では、広域テフラであるSK030が見られました。ルーペので観察できれいな菫青石が確認できました！", class: "field-2" %>
+        <%= f.text_area :memo, autocomplete: "memo", placeholder: "　（例）露頭では、広域テフラであるSK030が見られました。ルーペで菫青石が確認できました！　※170文字以内", class: "field-2" %>
       </div>
 
       <div class="new-edit-appeal">
         <%= f.label :"アピールポイント" %><br />
-        <%= f.text_area :appeal_point, autocomplete: "appeal_point", placeholder: "　（例）エスティングハンマーの他に、ウオヌマハンマーを持っていきました！斜面を登る際に役立ちます！", class: "field-2" %>
+        <%= f.text_area :appeal_point, autocomplete: "appeal_point", placeholder: "　（例）自前のウオヌマハンマーを持っていきました！斜面登りに役立ちます！　※120文字以内", class: "field-2" %>
       </div>
 
     <div class="actions">

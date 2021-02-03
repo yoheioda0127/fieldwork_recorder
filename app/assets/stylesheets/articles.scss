@@ -19,7 +19,9 @@
 }
 
 .app_logo_img {
-  height: 13vh;
+  // fieldwork recorderのロゴ画像
+  height: auto;
+  width: 50vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,6 +30,7 @@
 }
 
 .nav-lists {
+  // ナビゲーションリスト
   width: 70vw;
   display: flex;
   justify-content: space-around;
@@ -36,8 +39,10 @@
 }
 
 .user {
+  // ユーザーの名前
   display: flex;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   justify-content: flex-end;
   color: black;
   list-style: none;
@@ -50,8 +55,11 @@
 }
 
 .edit {
+  // 編集文字
   display: flex;
   justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: gray;
   list-style: none;
   text-decoration: none;
@@ -61,8 +69,11 @@
 }
 
 .logout {
+  // ログアウト文字
   display: flex;
   justify-content: flex-end;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   color: gray;
   list-style: none;
   text-decoration: none;
@@ -73,13 +84,18 @@
 
 
 .post-article {
+  // 新規投稿文字
+  width: 120px;
+  height: auto;
   display: flex;
+  justify-content: center;
   justify-content: flex-end;
   padding: 0.5em 1em;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: rgb(0, 201, 100);/*文字色*/
-  background: #FFF;
-  border: solid 3px rgb(0, 201, 100);/*線*/
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(255, 145, 0);
+  border: solid 3px rgb(255, 115, 0);/*線*/
   border-radius: 10px;/*角の丸み*/
   text-decoration: none;
   font-size: 140%;
@@ -92,6 +108,7 @@
 }
 
 .sign-up {
+  // 新規登録文字
   display: flex;
   justify-content: flex-end;
   color: gray;
@@ -104,6 +121,7 @@
 }
 
 .login {
+  // ログイン文字
   display: flex;
   justify-content: flex-end;
   color: gray;

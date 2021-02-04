@@ -460,14 +460,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;  
+  padding-top: 10vh;
+}
+
+.new-edit-delete-word {
+  font-family: monospace;
+  font-weight: bold;
+  font-size:35px ;
+  padding-bottom: 60px;
+  padding-top: 30px;
 }
 
 .new-edit-title {
+  /* 文字 */
+  font-size: 30px;
   width: 50px;
+}
+
+.post-new-edit-field {
+  font-family: monospace;
+  font-weight: bold;
+  font-size:30px ;
+  padding-bottom: 50px;
 }
 
 .new-edit-field {
   width: 1100px;
+  /* フォーム全体の幅を調整 */
+}
+
+.title-word {
+  /* タイトルの文字 */
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
 }
 
 .form-text-wrap{
@@ -475,14 +501,30 @@
 }
 
 .input-active-date-wrap {
+  display: none;
   margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+.active-day-word{
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .new-edit-image{
   padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.act_image_word{
+  font-family: monospace;
+  font-size:25px ;
 }
 
 .act_image {
@@ -491,7 +533,10 @@
   margin-top: 20px;
 }
 
-.new-edit-weather{
+.new-edit-weather-word{
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
   padding-top: 50px;
 }
 
@@ -505,6 +550,39 @@
 
 .new-edit-appeal{
   padding-top: 50px;
+}
+
+.act_image_data {
+  /* 画像添付ボタン装飾 */
+  border: crimson;
+}
+
+.act_image_data-word{
+  font-family: sans-serif;
+  font-size:25px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.new-edit-location-word {
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.new-edit-memo-word {
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.new-edit-appeal-word {
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .field-1 {
@@ -532,8 +610,7 @@
 }
 
 .field-4 {
-  appearance: none;
-  background-color: indianred;
+  background-color: cyan;
 }
 
 .field-5 {
@@ -576,6 +653,14 @@
 .delete-area-box {
   padding-top: 30px;
   width: 1100px;
+}
+
+.delete-word{
+  font-family: monospace;
+  font-weight: bold;
+  font-size:30px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .delete-button {

@@ -1,5 +1,22 @@
 /* 新規ユーザー登録画面 */
 
+.user-new-resi-word{
+  font-family: monospace;
+  font-weight: bold;
+  font-size:25px ;
+  padding-bottom: 60px;
+}
+
+.edit-delete-person{
+  font-family: monospace;
+  font-weight: bold;
+  font-size:35px ;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
 .new-user-back-ground{
   margin: 0 auto;
   width: 1050px;
@@ -7,6 +24,10 @@
 
 .new-person {
   padding-top: 100px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size:35px ;
+  padding-bottom: 60px;
 }
 
 .input-active-date-wrap {
@@ -18,6 +39,93 @@
 
 .user-new-resi-field{
   padding-top: 30px;
+}
+
+.avator_info{
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 60px;
+  padding-top: 30px;
+}
+
+.user-mail-address-word{
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 60px;
+  padding-top: 30px;
+}
+
+.users-password-word{
+  font-family: monospace;
+  font-size:25px ;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+.user-password-re-word{
+  font-family: monospace;
+  font-size: 25px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+.user-birthday-word{
+  font-family: monospace;
+  font-size:25px ;
+  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.new-edit-actions{
+  font-size: 15px;
+  width: 250px;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
+  margin: 2em 0;
+  font-weight: bold;
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(30, 133, 35);
+  border: solid 2px rgb(18, 85, 21);/*線*/
+  text-decoration: none;
+  border-radius: 10px;
+}
+.new-edit-actions:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.452);
+}
+
+.delete-word{
+  font-family: monospace;
+  font-weight: bold;
+  font-size:30px ;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.delete-button {
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: auto;
+  font-weight: bold;
+  color: rgb(255, 255, 255);/*文字色*/
+  background: rgb(248, 53, 53);
+  border: solid 2px rgb(179, 38, 38);/*線*/
+  text-decoration: none;
+  border-radius: 10px;
+}
+.delete-button:hover {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.452);
 }
 
 /* 新規ユーザー登録画面 */

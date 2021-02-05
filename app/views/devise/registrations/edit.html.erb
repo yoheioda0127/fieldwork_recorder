@@ -1,99 +1,76 @@
-<h2>プロフィール編集・アカウント削除 <%= resource_name.to_s.humanize %></h2>
+<div class="new-user-back-ground">
 
-<h3>プロフィール編集</h3>
+  <h2 class="edit-delete-person">プロフィール編集・アカウント削除</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <h3 class="new-person">プロフィール編集</h3>
 
-  <div class="field">
-    <%= f.label :"名前orニックネーム" %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="avatar-upload">
-    <div class="avatar_intro">
-      プロフィール画像（アイコンになります）
+    <div class="user-new-resi-field">
+      <div class = "user-new-resi-word">名前 or ニックネーム" </div>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "　（例）山田 太郎", class: "field-5" %>
     </div>
-    <div class="avatar_upload">
-      <%= f.file_field :avatar, id:"avatar" %>
+
+
+    <div class="user-new-resi-field">
+      <div class="avator_info">プロフィール画像（アイコンになります）</div>
+      <div class="avatar_upload">
+        <%= f.file_field :avatar, id:"avatar" %>
+      </div>
     </div>
-  </div>
 
-  <div class="field">
-    <%= f.label :"メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <div class="user-new-resi-field">
+      <div class="user-mail-address-word">メールアドレス</div>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "　（例）field-recorder@gmail.com", class: "field-5" %>
+    </div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div class="user-new-resi-field">
+      <h2 class="users-password-word">パスワード<h2>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "　半角英数6文字以上", class: "field-5" %>
+    </div>
+
+    <div class="user-new-resi-field">
+      <div class="user-password-re-word">パスワード（確認用）</div>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "　半角英数6文字以上", class: "field-5" %>
+    </div>
+
+    <div class="user-new-resi-field">
+      <div class='user-birthday-word'>生年月日（※必須）</div>
+      <div class='input-active-date-wrap'>
+        <%= raw sprintf(f.date_select(:birthday, class:'select-birth', id:"birth-date", use_month_numbers: true, prompt:'--', start_year: 1930, end_year: (Time.now.year - 5), date_separator: '%s'), "<p>　年　</p>", "<p>　月　</p>") + "<p>　日　</p>" %>
+      </div>
+    </div>
+
+    <div class="user-new-resi-field">
+      <div class='user-birthday-word'>現在の所属（学校、会社など）</div>
+      <%= f.text_field :school_and_company, autocomplete: "school_and_company", placeholder: "　（例）フィールド大学理学部地球科学科地質学専攻　堆積学研究室", class: "field-5" %>
+    </div>
+
+    <div class="user-new-resi-field">
+      <div class='user-birthday-word'>専攻科目（一番近い科目を選択してください）</div>
+      <%= f.collection_select(:major_id, Major.all, :id, :name, {}, {class: "field-3", id:"major_id"}) %>
+    </div>
+    
+    <div class="user-new-resi-field">
+      <div class='user-birthday-word'>現在の研究テーマ</div>
+      <%= f.text_field :research_theme, autocomplete: "research_theme", placeholder: "　（例）新潟県長岡市小国地域に分布する魚沼層群の地質構造", class: "field-1" %>
+    </div>
+
+    <div class="user-new-resi-field">
+      <div class='user-birthday-word'>自己紹介</div>
+      <%= f.text_area :introduction, autocomplete: "introduction", placeholder: "（例）はじめまして、堆積学を専攻している大学２年生です。アウトプットの場を増やそうとアプリをはじめました。気合と突き進む力なら誰にも負けません！よろしくお願いいたします。", class: "field-2" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "更新する", class: "new-edit-actions" %>
+    </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
+  <h3 class="delete-word">アカウントの削除</h3>
 
-    <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+  <%= button_to "アカウントを削除", registration_path(resource_name), class:"delete-button", data: { confirm: "アカウントを削除しますか?" }, method: :delete %></p>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+  <%= link_to "戻る", :back, class: "back-to-top" %>
 
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">生年月日</label>
-      <span class="indispensable">必須</span>
-    </div>
-    <div class='input-birth-wrap'>
-      <%= raw sprintf(
-        f.date_select(
-        :birthday,
-        class:'select-birth',
-        id:"birth-date",
-        use_month_numbers: true,
-        prompt:'--',
-        start_year: 1930,
-        end_year: (Time.now.year - 5),
-        date_separator: '%s'),
-      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-    </div>
-  </div>
-
-  <div class="field">
-    <%= f.label :"現在の所属（学校、会社など）" %><br />
-    <%= f.text_field :school_and_company, autocomplete: "school_and_company" %>
-  </div>
-
-  <div class="weight-bold-text">
-    専攻科目（一番近い科目を選択してください）
-  </div>
-  <%= f.collection_select(:major_id, Major.all, :id, :name, {}, {class:"select-box", id:"major_id"}) %>
-
-  <div class="field">
-    <%= f.label :"現在の研究テーマ" %><br />
-    <%= f.text_field :research_theme, autocomplete: "research_theme" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :"自己紹介" %><br />
-    <%= f.text_area :introduction, autocomplete: "introduction" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "更新する" %>
-  </div>
-<% end %>
-
-<h3>アカウントの削除</h3>
-
-<p>アカウントを削除しますか? <%= button_to "アカウントを削除", registration_path(resource_name), data: { confirm: "アカウントを削除しますか?" }, method: :delete %></p>
-
-<%= link_to "戻る", :back %>
+</div>

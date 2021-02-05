@@ -102,13 +102,15 @@
   box-shadow: 0 5px 6px rgb(179, 179, 179);
 }
 .post-article:hover {
-  text-decoration: underline;
-  color: purple;
-  border: solid 3px purple;/*線*/
+  color: white;
+  background-color: orangered;
+  border: solid 3px orangered;/*線*/
 }
 
 .sign-up {
   // 新規登録文字
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: flex-end;
   color: gray;
@@ -122,6 +124,8 @@
 
 .login {
   // ログイン文字
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: flex-end;
   color: gray;

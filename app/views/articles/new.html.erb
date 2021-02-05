@@ -4,15 +4,12 @@
     <%= form_for(@article) do |f| %>
 
       <div class="field">
-        <%= f.label :"タイトル" %><span>（必須）</span><br />
-        <%= f.text_field :title, autofocus: true, placeholder: "　（例）初めての魚沼層群の調査　※30文字以内", autocomplete: "title", class: "field-1" %>
+        <div class= "title-word">タイトル（必須）</div>
+        <div><%= f.text_field :title, autofocus: true, placeholder: "　（例）初めての魚沼層群の調査　※30文字以内", autocomplete: "title", class: "field-1" %></div>
       </div>
 
       <div class="form-group">
-        <div class='form-text-wrap'>
-          <label class="form-text">調査日時</label>
-          <span class="indispensable">（必須）</span>
-        </div>
+        <div class='active-day-word'>調査日時（必須）</div>
         <div class='input-active-date-wrap'>
         <%= raw sprintf(f.date_select(:activity_date, class: 'field-4', id:"activity_date", use_month_numbers: true, prompt:'--', start_year: 1930, end_year: (Time.now.year), date_separator: '%s'), "<p>　年　</p>", "<p>　月　</p>") + "<p>　日　</p>" %>
         </div>
@@ -23,31 +20,29 @@
           活動写真（3枚まで）
         </div>
         <div class="act_image">
-          <div class = "act_image_data" ><label>画像①（※必須）</label><br><%= f.file_field :top_image, id:"act_top_image" %></div>
-          <div class = "act_image_data" ><label>画像②</label><br><%= f.file_field :image_1, id:"act_image_1" %></div>
-          <div class = "act_image_data" ><label>画像③</label><br><%= f.file_field :image_2, id:"act_image_2" %></div>
+          <div class = "act_image_data" ><div class='act_image_data-word'>画像①（※必須）</div><%= f.file_field :top_image, id:"act_top_image" %></div>
+          <div class = "act_image_data" ><div class='act_image_data-word'>画像②</div><%= f.file_field :image_1, id:"act_image_1" %></div>
+          <div class = "act_image_data" ><div class='act_image_data-word'>画像③</div><%= f.file_field :image_2, id:"act_image_2" %></div>
         </div>
       </div>
 
-      <div class="new-edit-weather">
-        当日の天気
-      </div>
+      <div class="new-edit-weather-word">当日の天気</div>
       <div class="weight-bold-text">
         <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "field-3", id:"weather_id"}) %>
       </div>
 
       <div class="new-edit-location">
-        <%= f.label :"調査地" %><br />
+        <div class="new-edit-location-word">調査地</div>
         <%= f.text_field :location, autocomplete: "location", placeholder: "　（例）新潟県長岡市小国町　芝之又川　※45文字以内", class: "field-1" %>
       </div>
 
       <div class="new-edit-memo">
-        <%= f.label :"活動メモ" %><br />
+        <div class="new-edit-memo-word">活動メモ</div>
         <%= f.text_area :memo, autocomplete: "memo", placeholder: "　（例）露頭では、広域テフラであるSK030が見られました。ルーペで菫青石が確認できました！　※170文字以内", class: "field-2" %>
       </div>
 
       <div class="new-edit-appeal">
-        <%= f.label :"アピールポイント" %><br />
+        <div class="new-edit-appeal-word">工夫した点</div>
         <%= f.text_area :appeal_point, autocomplete: "appeal_point", placeholder: "　（例）自前のウオヌマハンマーを持っていきました！斜面登りに役立ちます！　※120文字以内", class: "field-2" %>
       </div>
 

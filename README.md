@@ -38,7 +38,7 @@ https://fieldwork-recorder.herokuapp.com/
 ### Basic認証
   user-name:field / password:1212
 
-### サンプルユーザー
+<!-- ### サンプルユーザー
 その１
 User.create(name: "ようへい" , email: "yohei@gmail.com", password: "a02598765",encrypted_password: "" ,birthday: "19920127", school_and_company: "千葉大学大学院", major_id: "2",research_theme: "上総層群梅ヶ瀬層の塊状砂岩層の形成過程", introduction: "はじめまして、堆積学を専攻している大学院２年生です。アウトプットの場を増やそうとアプリをはじめました。よろしくお願いいたします。")
 
@@ -51,9 +51,9 @@ User.create(name: "まさき" , email: "masaki@gmail.com", password: "a02598765"
 Article.create(user_id: "5" , major_id: "2" ,title: "初めての野外調査", activity_date: "20200122",weather_id: "2", location: "新潟県長岡市小国地先", memo: "実習の時とは異なるコースでかなり苦戦した。また、位置確認が困難なコースだった。" , appeal_point: "マップを複数枚印刷して、水没に備えた。")
 
 その２
-Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野外調査", activity_date: "20200628",weather_id: "4", location: "千葉県市原市養老川付近", memo: "層厚最大20mのものが見られる。" , appeal_point: "ゴムボートを購入して、調査に導入したこと。")
+Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野外調査", activity_date: "20200628",weather_id: "4", location: "千葉県市原市養老川付近", memo: "層厚最大20mのものが見られる。" , appeal_point: "ゴムボートを購入して、調査に導入したこと。") -->
 
-
+<!-- 
 
 ## アプリ設計
 
@@ -89,13 +89,16 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 | appeal_point | text    |                   |
 
 #### Association
-- belongs_to :user
+- belongs_to :user -->
 
 
 ## 今後の実装予定
+①コメント機能（フォローなどの交流システム）
+②ポートフォリオ機能（概要考える）
+③テストコード記述
+④汚いコードを単純化作業
 
-
-## ライセンス
+<!-- ## ライセンス -->
 
 
 ## 作者

@@ -1,15 +1,34 @@
-# APP名
+#アプリ紹介
+
+## アプリ名
 Fieldwork Recorder
 
 ## 開発環境
-
+-HTML5  
+-CSS3  
+-Javascript  
+-Ruby 2.6.5  
+-Ruby on Rails 6.0.3.4  
+-Git version 2.24.3  
 
 ## URL
 https://fieldwork-recorder.herokuapp.com/
 
-デプロイ環境：Heroku
+※デプロイに使用したプラットホーム：Heroku
 
 ## 機能
+①ユーザー管理機能  
+②活動記事投稿機能（写真 最大3枚まで投稿可）  
+③活動日数カウント機能  
+
+## ペルソナ
+-男性
+  -本アプリが対象としているフィールドワークを行なっている学生人口は、（体感的に）男性が過半数を占めている傾向がある。現に、筆者在学中も、同学年で生徒５０人中、女性は９人であった。
+-１８〜３０代・大学生〜大学院生（博士）
+  -「①流行に敏感」で、最も自分の行動を「②発信する時間と環境が担保されている状態」なため
+
+-某地方大学自然科学系学科在学3回生。授業・研究で月1〜5回のフィールドワークを課されている。  
+就職活動が目前に迫り、企業に対し、頑張ってきた、過酷な環境フィールドワークを数十分の口頭面接だけで表現できないと思っている。また、つながりは無いが学会や他大学の同じ分野の学生と知り合いたいとも思っている。
 
 
 ## 利用方法
@@ -81,8 +100,8 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 
 ## 作者
 
-Twitter https://twitter.com/Tech_geologist
-Github  https://github.com/yoheioda0127/fieldwork_recorder
+Twitter https://twitter.com/Tech_geologist  
+Github  https://github.com/yoheioda0127/fieldwork_recorder  
 
 ## 本アプリへの思い
 私は小さな頃から恐竜が好きでした。  
@@ -106,5 +125,5 @@ Github  https://github.com/yoheioda0127/fieldwork_recorder
 私は、自分の表現能力と可能性を広げたいだけです。  
 プログラミングはどんな分野、業界にも通用する世界を包括しうる技術だと思い、魅力に感じています。  
 このFieldwork Recorderは、そんな今までの周囲からのGIVEを遠ざけて、エンジニアになろうとしている最初の作品です。  
-ぎこちない覚えたてのコードで自分を精一杯表現しました。  
+ぎこちない覚えたてのコードで今までの自分を精一杯表現しました。  
 少しでも多くの人に触っていただける作品になれば嬉しいです。  

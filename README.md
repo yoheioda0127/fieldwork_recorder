@@ -12,14 +12,20 @@ Fieldwork Recorder
 - Git version 2.24.3  
 
 ## URL
-https://fieldwork-recorder.herokuapp.com/
+https://fieldwork-recorder.herokuapp.com/  
+※本番環境：Heroku
 
-※デプロイに使用したプラットホーム：Heroku
+## Cloneの作成
+
+```
+- % git clone https://github.com/yoheioda0127/fieldwork_recorder.git
+```
 
 ## 機能
 ①ユーザー管理機能  
 ②活動記事投稿機能（写真 最大3枚まで投稿可）  
 ③活動日数カウント機能  
+④コミュニケーション機能（フォローやメッセージ）
 
 ## ペルソナ
 - 男性  

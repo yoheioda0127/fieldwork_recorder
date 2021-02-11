@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: fieldwork_recorder_production
-  username: fieldwork_recorder
-  password: <%= ENV['FIELDWORK_RECORDER_DATABASE_PASSWORD'] %>
+  database:
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock

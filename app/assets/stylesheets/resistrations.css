@@ -142,6 +142,24 @@
 
 .login-page-title {
   padding-top: 15vh;
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.mail-address-tag {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.user-new-resi-field {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* ログイン画面 */

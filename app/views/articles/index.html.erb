@@ -53,6 +53,29 @@
                         <%= image_tag article.top_image, class: 'activity_top_image' %>
                   </div>
 
+                  <%# フォローの統計情報↓ %>
+                  <% if user_id.presence? %>
+                  <% @user ||= current_user %>
+                  <div class="stats">
+                    <a href="<%= following_user_path(@user) %>">
+                      <strong id="following" class="stat">
+                        <%= @user.following.count %>
+                      </strong>
+                      following
+                    </a>
+                    <a href="<%= followers_user_path(@user) %>">
+                      <strong id="followers" class="stat">
+                        <%= @user.followers.count %>
+                      </strong>
+                      followers
+                    </a>
+                  </div>
+                  <%end%>
+                  <%= form_with(model: current_user.active_relationships.build, local: true) do |f| %>
+                    <div><%= hidden_field_tag :followed_id, @user.id %></div>
+                    <%= f.submit "Follow", class: "btn btn-primary" %>
+                  <% end %>
+
                 </div>
           <% end %>
         <% end %>

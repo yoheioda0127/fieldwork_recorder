@@ -59,8 +59,6 @@ ActiveRecord::Schema.define(version: 2021_02_17_213445) do
     t.string "name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.date "birthday", null: false
-    t.text "school_and_company"
     t.integer "major_id", null: false
     t.text "research_theme"
     t.text "introduction"

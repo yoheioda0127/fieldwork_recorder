@@ -3,22 +3,27 @@
       <h1 class="asset-h1">プロフィール</h1>
       <div class = "asset-prof-personal">
         <div class="prof-avatar">
-          <%= image_tag @user.avatar, class: 'prof-avatar-data' %>
+          <% if @user.avatar.present? %>
+            <%= image_tag @user.avatar, class: 'prof-avatar-data' %>
+          <%else%>
+            <%= image_tag 'sample-avatar.jpg', class: 'prof-avatar-data' %>
+            <%# <img src="sample-avatar.jpg" class="prof-avatar-data"> %>
+          <% end %>
         </div>
         <h2 class="prof_user_name"><b><%= @user.name %></b></h2>
         <div class= "count-day-box">
-          <h3>活動日数 <b class= "count-day"><%=@user.articles.count.to_s%></b> 日間<h3>
+          <h3 >活動日数</h3> <b class= "count-day"> <%=@user.articles.count.to_s%> </b> <h3> 日間<h3>
         </div>
       </div>
       <div class="second-prof-box">
         <div class= "user-show-major-word">
-          <h3>専攻分野 ：<b><%= @user.major.name %>系</b><h3>
+          <h3 class = "user-show-intro" > 専攻分野<h3>：<%= @user.major.name %>系</h3>
         </div>
         <div class= "user-show-research-word">
-          <h3>研究テーマ ：<b><%= @user.research_theme %></b><h3>
+          <h3 class = "user-show-intro" >研究テーマ</h3><p>：<%= @user.research_theme %>
         </div>
         <div class= "user-show-intro-word">
-          <h3>自己紹介 ：<%= @user.introduction %><h3>
+          <h3 class = "user-show-intro"> 自己紹介</h3><p>：<%= @user.introduction %>
         </div>
       </div> 
     </div>

@@ -31,6 +31,8 @@
   display: flex;
   justify-content: center;
   font-size: 180%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .asset-prof-personal {
@@ -65,7 +67,8 @@
 }
 
 .count-day {
-  font-size: 150%;
+  font-size: 50px;
+  padding: 0 8px;
   color: red;
 }
 
@@ -76,16 +79,23 @@
   height : 350px;
 }
 
+.user-show-intro {
+  width: 140px;
+}
+
 .user-show-major-word {
   padding-bottom: 40px;
+  display: flex;
 }
 
 .user-show-research-word {
   padding-bottom: 40px;
+  display: flex;
 }
 
 .user-show-intro-word {
   padding-bottom: 40px;
+  display: flex;
 }
 
 .user-show-time-line-word {

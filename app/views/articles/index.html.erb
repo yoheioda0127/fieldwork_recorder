@@ -34,7 +34,12 @@
                       </div>
                       <div class="second-area">
                           <div class="index-avatar-box">
-                            <%= image_tag article.user.avatar, class: 'index-avatar' %>
+                            <% if article.user.avatar.present? %>
+                              <%= image_tag article.user.avatar, class: 'index-avatar' %>
+                            <%else%>
+                              <%= image_tag 'sample-avatar.jpg', class: 'index-avatar' %>
+                              <%# <img src="sample-avatar.jpg" class="index-avatar"> %>
+                            <% end %>
                           </div>
                         <div class = "second-right">
                             <div class="content_user_name">
@@ -54,7 +59,7 @@
                   </div>
 
                   <%# フォローの統計情報↓ %>
-                  <% if user_id.presence? %>
+                  <% if user_session.present? %>
                   <% @user ||= current_user %>
                   <div class="stats">
                     <a href="<%= following_user_path(@user) %>">

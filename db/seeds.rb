@@ -3,7 +3,7 @@
   email = Faker::Internet.email
   password = "a025987"
   encrypted_password = "a025987"
-  major_id = 1
+  major_id = 2
   research_theme = "テスト"
   introduction = "テスト"
 

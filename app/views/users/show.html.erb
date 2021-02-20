@@ -15,19 +15,21 @@
           <h3 >活動日数</h3> <b class= "count-day"> <%=@user.articles.count.to_s%> </b> <h3> 日間<h3>
         </div>
       </div>
+      <%# ※フォロー情報↓ %>
       <% @user ||= current_user %>
-      <div class="stats">
-        <a href="<%= following_user_path(@user) %>">
+      <div class="show-stats-box">
+        <a href="<%= following_user_path(@user) %>" class="show-stats">
           <strong id="following" class="stat">
-            <%= @user.following.count %>
+            <b><%= @user.following.count %></b>
           </strong>
-          following
+          フォロー
         </a>
-        <a href="<%= followers_user_path(@user) %>">
+        &nbsp;<%# 空白 %>
+        <a href="<%= followers_user_path(@user) %>" class="show-stats">
           <strong id="followers" class="stat">
-            <%= @user.followers.count %>
+            <b><%= @user.followers.count %></b>
           </strong>
-          followers
+          フォロワー
         </a>
       </div>
       <div class="second-prof-box">
@@ -46,34 +48,39 @@
 
   <div class="asset-article-box">
     <h1 class = "user-show-time-line-word" ><b>タイムライン</b></h1>
-    <div class="user-show-content-post-back">
-    <% @articles.each do |article| %>
-    <% if article.top_image.present?%>
-    <% if article.user_id == @user.id%>
-    <%= link_to article_path(article.id), class: "active-all" do %>
-      <div class = "user-show-content-part">
-          <div class="title-box">
-            <h2 class = "title"><b><%= article.title %></b></h2>
-          </div>
-          <div class="user-show-second-area">
-            <div class = "second-right">
-              <div class = "user-show-content-major">
-                  <div class="major-word"><b>ジャンル：<%= article.user.major.name %>系</b></div>
-              </div>
-              <div class = "user-show-index-active-day">
-                <div >活動日：<%= article.activity_date %></div>
-              </div>
-            </div> 
-          </div>
+    <% if @articles.present? %>
+      <div class="user-show-content-post-back">
+        <% @articles.each do |article| %>
+          <% if article.top_image.present?%>
+            <% if article.user_id == @user.id%>
+              <%= link_to article_path(article.id), class: "active-all" do %>
+                <div class = "user-show-content-part">
+                    <div class="title-box">
+                      <h2 class = "title"><b><%= article.title %></b></h2>
+                    </div>
+                    <div class="user-show-second-area">
+                      <div class = "second-right">
+                        <div class = "user-show-content-major">
+                            <div class="major-word"><b>ジャンル：<%= article.user.major.name %>系</b></div>
+                        </div>
+                        <div class = "user-show-index-active-day">
+                          <div >活動日：<%= article.activity_date %></div>
+                        </div>
+                      </div> 
+                    </div>
 
-          <div class="user-show-top-img">
-            <%= image_tag article.top_image, class: 'activity_top_image' %>
-          </div>
+                    <div class="user-show-top-img">
+                      <%= image_tag article.top_image, class: 'activity_top_image' %>
+                    </div>
 
-        </div>
-    <% end %>
-    <% end %>
-    <% end %>
-    <% end %>
+                  </div>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <%else%>
+    <div class="index-dummy-word">まだ投稿がありません。<br>あなたの活動を記録しましょう！</div>
+    <%end%>
   </div>
 </div>

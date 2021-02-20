@@ -24,6 +24,7 @@
 
   <div class="index-time-line">
     <h1 class = "time-line-word" ><b>タイムライン</b></h1>
+    <% if @articles.present? %>
     <div class="content-post">
       <% @articles.each do |article| %>
         <% if article.top_image.present?%>
@@ -57,30 +58,14 @@
                       <div class="top-img">
                         <%= image_tag article.top_image, class: 'activity_top_image' %>
                   </div>
-
-                  <%# フォローの統計情報↓ %>
-                  <% if user_session.present? %>
-                  <% @user ||= current_user %>
-                  <div class="stats">
-                    <a href="<%= following_user_path(@user) %>">
-                      <strong id="following" class="stat">
-                        <%= @user.following.count %>
-                      </strong>
-                      following
-                    </a>
-                    <a href="<%= followers_user_path(@user) %>">
-                      <strong id="followers" class="stat">
-                        <%= @user.followers.count %>
-                      </strong>
-                      followers
-                    </a>
-                  </div>
-                  <%end%>
-
                 </div>
           <% end %>
         <% end %>
       <% end %>
+      <%# 投稿がないときのサンプル投稿 %>
     </div>
+    <%else%>
+    <div class="index-dummy-word">まだ投稿がありません。<br>あなたの活動を記録しましょう！</div>
+    <%end%>
   </div>
 </div>

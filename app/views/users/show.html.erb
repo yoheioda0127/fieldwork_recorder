@@ -15,6 +15,21 @@
           <h3 >活動日数</h3> <b class= "count-day"> <%=@user.articles.count.to_s%> </b> <h3> 日間<h3>
         </div>
       </div>
+      <% @user ||= current_user %>
+      <div class="stats">
+        <a href="<%= following_user_path(@user) %>">
+          <strong id="following" class="stat">
+            <%= @user.following.count %>
+          </strong>
+          following
+        </a>
+        <a href="<%= followers_user_path(@user) %>">
+          <strong id="followers" class="stat">
+            <%= @user.followers.count %>
+          </strong>
+          followers
+        </a>
+      </div>
       <div class="second-prof-box">
         <div class= "user-show-major-word">
           <h3 class = "user-show-intro" > 専攻分野<h3>：<%= @user.major.name %>系</h3>

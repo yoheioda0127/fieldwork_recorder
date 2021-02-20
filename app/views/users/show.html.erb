@@ -32,17 +32,28 @@
           フォロワー
         </a>
       </div>
+      <%# フォローボタン %>
+      <% unless current_user?(@user) %>
+        <div>
+        <% if current_user.following?(@user) %>
+          <%= render 'unfollow' %>
+        <% else %>
+          <%= render 'follow' %>
+        <% end %>
+        </div>
+      <% end %>
+
       <div class="second-prof-box">
-        <div class= "user-show-major-word">
-          <h3 class = "user-show-intro" > 専攻分野<h3>：<%= @user.major.name %>系</h3>
-        </div>
-        <div class= "user-show-research-word">
-          <h3 class = "user-show-intro" >研究テーマ</h3><p>：<%= @user.research_theme %>
-        </div>
-        <div class= "user-show-intro-word">
-          <h3 class = "user-show-intro"> 自己紹介</h3><p>：<%= @user.introduction %>
-        </div>
-      </div> 
+          <div class= "user-show-major-word">
+            <h3 class = "user-show-intro" > 専攻分野<h3>：<%= @user.major.name %>系</h3>
+          </div>
+          <div class= "user-show-research-word">
+            <h3 class = "user-show-intro" >研究テーマ</h3><p>：<%= @user.research_theme %>
+          </div>
+          <div class= "user-show-intro-word">
+            <h3 class = "user-show-intro"> 自己紹介</h3><p>：<%= @user.introduction %>
+          </div>
+        </div> 
     </div>
 
 
@@ -80,7 +91,7 @@
         <% end %>
       </div>
     <%else%>
-    <div class="index-dummy-word">まだ投稿がありません。<br>あなたの活動を記録しましょう！</div>
+    <div class="index-dummy-word">まだ活動記事がありません。<br>あなたの活動を投稿しましょう！</div>
     <%end%>
   </div>
 </div>

@@ -13,7 +13,12 @@
           </div>
         </div>
         <div class = "user-info">
-            <%= image_tag @article.user.avatar,class:"avatar-box-img" %>
+            <% if @article.user.avatar.present? %>
+              <%= image_tag @article.user.avatar, class: 'avatar-box-img' %>
+            <%else%>
+              <%= image_tag 'sample-avatar.jpg', class: 'avatar-box-img' %>
+              <%# <img src="sample-avatar.jpg" class="prof-avatar-data"> %>
+            <% end %>
             <h3 class="user_name"><b><%= link_to @article.user.name, "/users/#{@article.user_id}", class: "link_user_name" %></b></h3>
         </div>
       </div>
@@ -40,19 +45,19 @@
         <div class="location-text-pack">
           <h2 class="location-text">活動地域：</h2>
         </div>
-        <h3 class="location-text-data"><%= @article.location %></h3>
+        <p class="location-text-data"><%= @article.location %>
       </div>
       <div class="memo-text-box">
         <div class="memo-text-pack">
           <h2 class="memo-text">活動メモ：</h2>
         </div>
-        <h3 class="memo-text-data"><%= @article.memo %></h3>
+        <p class="memo-text-data"><%= @article.memo %>
       </div>
       <div class="appeal-point-text-box">
         <div class="appeal-point-text-pack">
           <h2 class="appeal-point-text">工夫した点：</h2>
         </div>
-        <h3 class="appeal-point-text-data"><%= @article.appeal_point %></h3>
+        <p class="appeal-point-text-data"><%= @article.appeal_point %>
       </div>
     </div>
     <div class ="show-bottom">

@@ -10,6 +10,19 @@ class UsersController < ApplicationController
     # @article = Article.find(params[:id])
   end
   
+  # def followings
+  #   @user =User.find(params[:id])
+  #   @users =@user.followings.page(params[:page]).per(5)
+  #   render 'show_followings'
+  # end
+
+  # def followers
+  #   @user =User.find(params[:id])
+  #   @users =@user.followers.page(params[:page]).per(5)
+  #   render 'show_followers'
+  # end
+
+
   private
   
   def article_params

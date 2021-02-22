@@ -15,33 +15,34 @@
           <h3 >活動日数</h3> <b class= "count-day"> <%=@user.articles.count.to_s%> </b> <h3> 日間<h3>
         </div>
       </div>
-      <%# ※フォロー情報↓ %>
-      <% @user ||= current_user %>
-      <div class="show-stats-box">
-        <a href="<%= following_user_path(@user) %>" class="show-stats">
-          <strong id="following" class="stat">
-            <b><%= @user.following.count %></b>
-          </strong>
-          フォロー
-        </a>
-        &nbsp;<%# 空白 %>
-        <a href="<%= followers_user_path(@user) %>" class="show-stats">
-          <strong id="followers" class="stat">
-            <b><%= @user.followers.count %></b>
-          </strong>
-          フォロワー
-        </a>
+
+      <div class= "show-follow-info">
+
+          <%# ※フォロー情報↓ %>
+          <div class="show-follow-info-detail">
+            <% @user ||= current_user %>
+            <div class="show-stats-box">
+              <a href="<%= following_user_path(@user) %>" class="show-stats">
+                <strong id="following" class="stat">
+                  <b><%= @user.following.count %></b>
+                </strong>
+                フォロー
+              </a>
+              &nbsp;<%# 空白 %>
+              <a href="<%= followers_user_path(@user) %>" class="show-stats">
+                <strong id="followers" class="stat">
+                  <b><%= @user.followers.count %></b>
+                </strong>
+                フォロワー
+              </a>
+            </div>
+          </div>
+          <%# フォローボタン↓ %>
+          <div>
+            <%= render 'users/follow_form' if user_signed_in? %>
+          </div>
+
       </div>
-      <%# フォローボタン %>
-      <% unless current_user?(@user) %>
-        <div>
-        <% if current_user.following?(@user) %>
-          <%= render 'unfollow' %>
-        <% else %>
-          <%= render 'follow' %>
-        <% end %>
-        </div>
-      <% end %>
 
       <div class="second-prof-box">
           <div class= "user-show-major-word">

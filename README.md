@@ -72,10 +72,10 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 
 
 
-## アプリ設計
+<!-- ## アプリ設計 -->
 
 
-### ER図(DB設計)
+<!-- ### ER図(DB設計) -->
 
 
 ### テーブル設計
@@ -108,34 +108,50 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 #### Association
 - belongs_to :user
 
+## 実装機能
+### アプリケーションの課題と今後の解決策
+以下のシートをご覧ください。アプリケーションのペルソナが持つ課題を洗い出し、そして解決策となる追加実装の仕様を洗い出しました。  
+  
+https://docs.google.com/spreadsheets/d/1QcTxyX9t4VJOiSGMlv628sJJIzKOI1f2RDyYAgc4dm4/edit?usp=sharing  
+  
+特に、スマートフォンからのSNS投稿が一般的になっている今日、本作品がスマートフォンに対応したブラウジングができないことは、大きなユーザーの利用機会損失であると考えています。  
+
+### 現在出ている不具合
+  
+現在確認できている不具合は以下のとおりです。順次修正を行っていきます。
+
+・新規ユーザー登録するとエラーが出る。
+・ユーザー登録内容の変更を行うとエラーが出る。
+
 
 ## 今後の実装予定
-①コメント機能（フォローなどの交流システム）  
-②ポートフォリオ機能（概要考える）  
-③テストコード記述  
-④汚いコードを単純化作業  
+① フォロー＆フォロワーページ  
+② コメント機能  
+③ ダイレクトメッセージ機能  
+④ 随時リファクタリング  
 
 ## DEMO（※ローカル環境での稼働状況）
 
 ### トップページ（投稿一覧機能）
 トップ画像には、これまでフィールドワークで撮影してきた写真を扉絵をして展示してあります。Swiperにてオートスライド機能を実装しています。最上部のバナーは、常時表示されます（DEMO1-3）。  
 下にスクロールすると、タイムラインに移り、全ユーザー全ての投稿を見ることができます（DEMO画像4）。投稿内容は未ログイン時でもアクセス可能です。  
+  
 - 未ログイン時  
 　画面上部のバナー右側に、新規登録ボタンと、ログインボタンを配置しています（サンプル画像1）。
-
+  
 - ログイン時  
 　上部バナーの表示が全て変わり、左から、ログアウトボタン、プロフィール編集ボタン、ユーザー名ボタン（プロフィールへ）、新規記事投稿ボタンが表示されます（DEMO画像3）。
 
 
 ![DEMO画像1](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F1.png)  
 DEMO画像1. トップ画面イメージ（未ログイン時）
-
+  
 ![DEMO画像2](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F2.gif)  
 DEMO画像2. オートスライド機能の動作
-
+  
 ![DEMO画像3](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F3.png)  
 DEMO画像3. トップ画面イメージ（ログイン時）
-
+  
 ![DEMO画像4](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F4.png)  
 DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
 
@@ -164,10 +180,10 @@ DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
 
 ![DEMO画像5](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F5.png)  
 DEMO画像5. ユーザー新規登録画面　最上部
-
+  
 ![DEMO画像6](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F6.png)  
 DEMO画像6. ユーザー新規登録画面　最下部
-
+  
 ![DEMO画像7](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F7.png)  
 DEMO画像7. ログイン画面
 
@@ -184,11 +200,10 @@ DEMO画像7. ログイン画面
 - 調査地
 - 活動メモ
 - 工夫した点
-
+  
 ![DEMO画像8](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F8.png)  
 DEMO画像8. 活動記事投稿画面　最上部
-
-
+  
 ![DEMO画像9](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F9.png)  
 DEMO画像9. 活動記事投稿画面　最下部
 
@@ -199,14 +214,12 @@ DEMO画像9. 活動記事投稿画面　最下部
 また、ユーザー名（ここでは「ようへい」）はユーザー詳細画面へのリンクです（DEMO画像14-16）。  
 
 下へスクロールすると、直下に記事編集・削除ボタンと、TOPへ戻るボタンが出現します（DEMO画像11）。  
-
-
+  
 ![DEMO画像10](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F10.png)  
 DEMO画像10. 記事詳細画面　最上部
-
+  
 ![DEMO画像11](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F11true.png)  
 DEMO画像11. 記事詳細画面　最下部
-
 ### 記事の編集・削除画面
 
 記事詳細画面下部の「記事の編集・削除を行うボタン」から記事編集・削除画面へ遷移することができます。（DEMO画像11-13）。  
@@ -221,11 +234,10 @@ DEMO画像11. 記事詳細画面　最下部
 - 調査地
 - 活動メモ
 - 工夫した点
-
-
+  
 ![DEMO画像12](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F12.png)  
 DEMO画像12. 編集・削除画面（最上部）
-
+  
 ![DEMO画像13](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F13.png)  
 DEMO画像13. 編集・削除画面（最下部）
 
@@ -236,18 +248,16 @@ DEMO画像13. 編集・削除画面（最下部）
 新規ユーザー登録時に記述した内容が表示されいています。赤い数字の「3」は、投稿している記事の数を、フィールドワークの要である「活動日数」としてカウントしています（DEMO画像14, 15）。  
 
 他のユーザーでログインしている場合は、フォロー、アンフォローのアクションが「フォローボタン」で可能です（DEMO画像16, 17）。  
-
-
+  
 ![DEMO画像14](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F14.png)  
 DEMO画像14. ユーザー詳細画面
-
+  
 ![DEMO画像15](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F15.png)  
 DEMO画像15. ユーザー詳細画面　下部
-
-
+  
 ![DEMO画像16](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F16.png)  
 DEMO画像16. ユーザー詳細画面　他ユーザーを未フォロー
-
+  
 ![DEMO画像17](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F17.png)  
 DEMO画像17. ユーザー詳細画面　他ユーザーをフォロー中
 

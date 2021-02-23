@@ -4,12 +4,15 @@
 Fieldwork Recorder
 
 ## 開発環境
-- HTML5  
-- CSS3  
-- Javascript  
-- Ruby 2.6.5  
-- Ruby on Rails 6.0.3.4  
-- Git version 2.24.3  
+- macOS Catalina 10.15.7
+- Visual Studio Code
+- Github  
+
+- Ruby 2.6.5
+- Ruby on Rails 6.0.3.4
+- HTML
+- CSS
+- MySQL 5.6
 
 ## URL
 http://54.168.22.24/

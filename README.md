@@ -12,8 +12,8 @@ Fieldwork Recorder
 - Git version 2.24.3  
 
 ## URL
-https://fieldwork-recorder.herokuapp.com/  
-※本番環境：Heroku
+http://54.168.22.24/
+※本番環境：AWS EC2
 
 ## Cloneの作成
 
@@ -22,10 +22,13 @@ https://fieldwork-recorder.herokuapp.com/
 ```
 
 ## 機能
-①ユーザー管理機能  
-②活動記事投稿機能（写真 最大3枚まで投稿可）  
-③活動日数カウント機能  
-④コミュニケーション機能（フォローやメッセージ）
+① 野外活動写真を投稿機能。  
+② 実名、もしくはニックネームで登録＆投稿機能  
+③ 他ユーザーとのフォロー機能  
+④ 投稿に対してのメッセージ機能  
+⑤ 投稿に対してのいいね機能  
+⑥ ダイレクトメール機能  
+
 
 ## ペルソナ
 - 男性  
@@ -45,6 +48,10 @@ https://fieldwork-recorder.herokuapp.com/
 ## テスト用アカウント
 ### Basic認証
   user-name:field / password:1212
+### ユーザー
+- ニックネーム: まいけみ
+- メールアドレス: maikemi@gamil.com
+- パスワード: a025987
 
 <!-- ### サンプルユーザー
 その１
@@ -61,7 +68,7 @@ Article.create(user_id: "5" , major_id: "2" ,title: "初めての野外調査", 
 その２
 Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野外調査", activity_date: "20200628",weather_id: "4", location: "千葉県市原市養老川付近", memo: "層厚最大20mのものが見られる。" , appeal_point: "ゴムボートを購入して、調査に導入したこと。") -->
 
-<!-- 
+
 
 ## アプリ設計
 
@@ -97,7 +104,7 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 | appeal_point | text    |                   |
 
 #### Association
-- belongs_to :user -->
+- belongs_to :user
 
 
 ## 今後の実装予定

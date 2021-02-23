@@ -119,7 +119,7 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 ## 作者
 
 Twitter https://twitter.com/Tech_geologist  
-Github  https://github.com/yoheioda0127/fieldwork_recorder  
+Github  https://github.com/yoheioda0127  
 
 ## 本アプリへの思い
 私は小さな頃から恐竜が好きでした。  

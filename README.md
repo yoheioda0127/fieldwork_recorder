@@ -189,7 +189,7 @@ DEMO画像7. ログイン画面
 DEMO画像8. 活動記事投稿画面　最上部
 
 
-![DEMO画像9](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F8.png)  
+![DEMO画像9](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F9.png)  
 DEMO画像9. 活動記事投稿画面　最下部
 
 ### 記事詳細画面
@@ -204,7 +204,7 @@ DEMO画像9. 活動記事投稿画面　最下部
 ![DEMO画像10](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F10.png)  
 DEMO画像10. 記事詳細画面　最上部
 
-![DEMO画像11](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F11.png)  
+![DEMO画像11](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F11true.png)  
 DEMO画像11. 記事詳細画面　最下部
 
 ### 記事の編集・削除画面

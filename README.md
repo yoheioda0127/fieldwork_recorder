@@ -29,9 +29,9 @@ http://54.168.22.24/
   
 作者をざっくり表現すると、  
   
-　　- 幼少期〜高校時代＝恐竜好き
-　　- 大学・大学院時代＝地質学専攻
-　　- 現在＝地下資源会社で地質屋
+- 幼少期〜高校時代＝恐竜好き  
+- 大学・大学院時代＝地質学専攻  
+- 現在＝地下資源会社で地質屋  
   
 という人間です。  
 大学、大学院生時代は、地質系の学科にてフィールドワークを行ってきました。地層はとても美しいです。自然は不均質な形や性質をしています（例：木は決まった形をしていない）。しかし、地層はその不均質に対して、直線や曲線を岩壁に描いていています。これは地球が46億年かけてつくった壮大なアートです。
@@ -160,16 +160,16 @@ https://docs.google.com/spreadsheets/d/1QcTxyX9t4VJOiSGMlv628sJJIzKOI1f2RDyYAgc4
 
 
 ![DEMO画像1](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F1.png)  
-DEMO画像1. トップ画面イメージ（未ログイン時）
+↑DEMO画像1. トップ画面イメージ（未ログイン時）
   
 ![DEMO画像2](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F2.gif)  
-DEMO画像2. オートスライド機能の動作
+↑DEMO画像2. オートスライド機能の動作
   
 ![DEMO画像3](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F3.png)  
-DEMO画像3. トップ画面イメージ（ログイン時）
+↑DEMO画像3. トップ画面イメージ（ログイン時）
   
 ![DEMO画像4](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F4.png)  
-DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
+↑DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
 
 
 ### 新規登録・ログイン画面
@@ -193,13 +193,13 @@ DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
 
 
 ![DEMO画像5](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F5.png)  
-DEMO画像5. ユーザー新規登録画面　最上部
+↑DEMO画像5. ユーザー新規登録画面　最上部
   
 ![DEMO画像6](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F6.png)  
-DEMO画像6. ユーザー新規登録画面　最下部
+↑DEMO画像6. ユーザー新規登録画面　最下部
   
 ![DEMO画像7](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F7.png)  
-DEMO画像7. ログイン画面
+↑DEMO画像7. ログイン画面
 
 ### 活動記事投稿画面
 
@@ -216,10 +216,10 @@ DEMO画像7. ログイン画面
 - 工夫した点
   
 ![DEMO画像8](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F8.png)  
-DEMO画像8. 活動記事投稿画面　最上部
+↑DEMO画像8. 活動記事投稿画面　最上部
   
 ![DEMO画像9](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F9.png)  
-DEMO画像9. 活動記事投稿画面　最下部
+↑DEMO画像9. 活動記事投稿画面　最下部
 
 ### 記事詳細画面
 
@@ -230,10 +230,10 @@ DEMO画像9. 活動記事投稿画面　最下部
 下へスクロールすると、直下に記事編集・削除ボタンと、TOPへ戻るボタンが出現します（DEMO画像11）。  
   
 ![DEMO画像10](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F10.png)  
-DEMO画像10. 記事詳細画面　最上部
+↑DEMO画像10. 記事詳細画面　最上部
   
 ![DEMO画像11](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F11true.png)  
-DEMO画像11. 記事詳細画面　最下部
+↑DEMO画像11. 記事詳細画面　最下部
 ### 記事の編集・削除画面
 
 記事詳細画面下部の「記事の編集・削除を行うボタン」から記事編集・削除画面へ遷移することができます。（DEMO画像11-13）。  
@@ -250,10 +250,10 @@ DEMO画像11. 記事詳細画面　最下部
 - 工夫した点
   
 ![DEMO画像12](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F12.png)  
-DEMO画像12. 編集・削除画面（最上部）
+↑DEMO画像12. 編集・削除画面（最上部）
   
 ![DEMO画像13](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F13.png)  
-DEMO画像13. 編集・削除画面（最下部）
+↑DEMO画像13. 編集・削除画面（最下部）
 
 
 ### ユーザー詳細画面
@@ -264,16 +264,16 @@ DEMO画像13. 編集・削除画面（最下部）
 他のユーザーでログインしている場合は、フォロー、アンフォローのアクションが「フォローボタン」で可能です（DEMO画像16, 17）。  
   
 ![DEMO画像14](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F14.png)  
-DEMO画像14. ユーザー詳細画面
+↑DEMO画像14. ユーザー詳細画面
   
 ![DEMO画像15](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F15.png)  
-DEMO画像15. ユーザー詳細画面　下部
+↑DEMO画像15. ユーザー詳細画面　下部
   
 ![DEMO画像16](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F16.png)  
-DEMO画像16. ユーザー詳細画面　他ユーザーを未フォロー
+↑DEMO画像16. ユーザー詳細画面　他ユーザーを未フォロー
   
 ![DEMO画像17](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F17.png)  
-DEMO画像17. ユーザー詳細画面　他ユーザーをフォロー中
+↑DEMO画像17. ユーザー詳細画面　他ユーザーをフォロー中
 
 <!-- ## ライセンス -->
 

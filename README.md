@@ -127,6 +127,19 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 　上部バナーの表示が全て変わり、左から、ログアウトボタン、プロフィール編集ボタン、ユーザー名ボタン（プロフィールへ）、新規記事投稿ボタンが表示されます（DEMO画像3）。
 
 
+![DEMO画像1](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F1.png)  
+DEMO画像1. トップ画面イメージ（未ログイン時）
+
+![DEMO画像2](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F2.gif)  
+DEMO画像2. オートスライド機能の動作
+
+![DEMO画像3](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F3.png)  
+DEMO画像3. トップ画面イメージ（ログイン時）
+
+![DEMO画像4](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F4.png)  
+DEMO画像4. トップ画面下部のタイムライン（未ログイン時）
+
+
 ### 新規登録・ログイン画面
 
 未ログイン状態で画面右上の新規登録ボタンを押すと、新規登録画面へ遷移します。必要情報を入力し、最下部の登録ボタン（緑色）を押すことによって登録完了となります（DEMO画像5, 6）。  
@@ -149,6 +162,15 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 - パスワード
 
 
+![DEMO画像5](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F5.png)  
+DEMO画像5. ユーザー新規登録画面　最上部
+
+![DEMO画像6](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F6.png)  
+DEMO画像6. ユーザー新規登録画面　最下部
+
+![DEMO画像7](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F7.png)  
+DEMO画像7. ログイン画面
+
 ### 活動記事投稿画面
 
 ログイン状態で画面右上の記事投稿ボタン（オレンジ色）を押すと、活動記事投稿画面へ遷移します。必要情報を入力し、最下部の登録ボタン（緑色）を押すことによって投稿完了となります（DEMO画像8, 9）。  
@@ -163,6 +185,13 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 - 活動メモ
 - 工夫した点
 
+![DEMO画像8](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F8.png)  
+DEMO画像8. 活動記事投稿画面　最上部
+
+
+![DEMO画像9](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F8.png)  
+DEMO画像9. 活動記事投稿画面　最下部
+
 ### 記事詳細画面
 
 トップページのタイムラインにて、投稿されている活動記事を選択すると、記事詳細画面へ遷移します（DEMO画像10）。最大3枚の写真が表示されます。写真の並び順は、記事投稿時の①〜③に対応しています（①が左、②が中央、③が右）（DEMO画像8）。  
@@ -171,6 +200,12 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 
 下へスクロールすると、直下に記事編集・削除ボタンと、TOPへ戻るボタンが出現します（DEMO画像11）。  
 
+
+![DEMO画像10](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F10.png)  
+DEMO画像10. 記事詳細画面　最上部
+
+![DEMO画像11](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F11.png)  
+DEMO画像11. 記事詳細画面　最下部
 
 ### 記事の編集・削除画面
 
@@ -188,6 +223,13 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 - 工夫した点
 
 
+![DEMO画像12](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F12.png)  
+DEMO画像12. 編集・削除画面（最上部）
+
+![DEMO画像13](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F13.png)  
+DEMO画像13. 編集・削除画面（最下部）
+
+
 ### ユーザー詳細画面
 
 「ページ上部バナー」、及び「記事詳細画面」のユーザー名（ようへい）はユーザ詳細ページへのリンクです（DEMO画像10, 14）。  
@@ -196,6 +238,18 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 他のユーザーでログインしている場合は、フォロー、アンフォローのアクションが「フォローボタン」で可能です（DEMO画像16, 17）。  
 
 
+![DEMO画像14](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F14.png)  
+DEMO画像14. ユーザー詳細画面
+
+![DEMO画像15](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F15.png)  
+DEMO画像15. ユーザー詳細画面　下部
+
+
+![DEMO画像16](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F16.png)  
+DEMO画像16. ユーザー詳細画面　他ユーザーを未フォロー
+
+![DEMO画像17](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/DEMO%E7%94%BB%E5%83%8F17.png)  
+DEMO画像17. ユーザー詳細画面　他ユーザーをフォロー中
 
 <!-- ## ライセンス -->
 

@@ -15,13 +15,13 @@ Fieldwork Recorder
 - MySQL 5.6
 
 ## URL
-http://54.168.22.24/
+http://54.168.22.24/  
 ※本番環境：AWS EC2
 
 ## Cloneの作成
 
 ```
-- % git clone https://github.com/yoheioda0127/fieldwork_recorder.git
+% git clone https://github.com/yoheioda0127/fieldwork_recorder.git
 ```
 
 ## 機能
@@ -95,7 +95,7 @@ Article.create(user_id: "4" , major_id: "1" ,title: "ボートを使用した野
 #### Association
 - has_many :articles
 
-###articlesテーブル
+### articlesテーブル
 | Column       | Type    | Options           |
 | ------------ | ------- | -------------     |
 | major_id     | integer | foreign_key: true |

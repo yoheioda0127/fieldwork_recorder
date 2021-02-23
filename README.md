@@ -1,5 +1,5 @@
+![トップ画像](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/app/assets/images/app_logo.jpg)  
 # オリジナルアプリ紹介
-
 ## 開発したアプリ名
 Fieldwork Recorder
 

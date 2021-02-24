@@ -4,8 +4,8 @@ FactoryBot.define do
     email                 {Faker::Internet.free_email}
     password              {Faker::Internet.password(min_length: 6)}
     password_confirmation {password}
-    reserch_theme         { Faker::Lorem.characters(170) }
-    introduction          { Faker::Lorem.characters(170) }
+    reserch_theme         { Faker::Lorem.characters(60) }
+    introduction          { Faker::Lorem.characters(150) }
 
     after(:build) do |user|
       user.avatar.attach(io: File.open('public/sample-avatar.png'), filename: 'sample-avatar.png')

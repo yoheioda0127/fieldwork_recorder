@@ -10,18 +10,13 @@ class Article < ApplicationRecord
   def was_attached?
     self.top_image.attached?
   end
-  
-  with_options presence: {message: 'は必須内容です！！' } do
-    validates :title
-    validates :activity_date
-  end
 
-  # validates :title, {presence: true, length: {maximum: 30}}
+  validates :title, length: {maximum: 30}
 
-  # validates :location, {presence: true, length: {maximum: 45}}
+  validates :location, length: {maximum: 45}
 
-  # validates :memo, {presence: true, length: {maximum: 170}}
+  validates :memo, length: {maximum: 170}
 
-  # validates :appeal_point, {presence: true, length: {maximum: 120}}
+  validates :appeal_point, length: {maximum: 120}
 
 end

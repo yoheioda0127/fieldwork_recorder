@@ -12,12 +12,16 @@ class User < ApplicationRecord
   has_many         :following, through: :active_relationships, source: :followed
   has_many         :followers, through: :passive_relationships, source: :follower
 
+  validates :name, presence: true, length: {maximum: 15}
 
-  with_options presence: true do
-    validates :name
-  end
+  validates :reserch_theme, length: {maximum: 60}
+
+  validates :introduction, length: {maximum: 150}
 
   validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
+  # 英数半角記号
+
+  validates :major_id, presence: true
 
   def was_attached?
     self.avatar.attached?

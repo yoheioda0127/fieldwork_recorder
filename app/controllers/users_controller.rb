@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   
-  def edit
-  end
+
 
   def show
     @user = User.find(params[:id])
@@ -10,6 +9,7 @@ class UsersController < ApplicationController
     # @article = Article.find(params[:id])
   end
   
+
   # def followings
   #   @user =User.find(params[:id])
   #   @users =@user.followings.page(params[:page]).per(5)

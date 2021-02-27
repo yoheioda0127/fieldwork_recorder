@@ -22,6 +22,19 @@ class User < ApplicationRecord
   # 英数半角記号
 
   validates :major_id,            presence: { message: 'は必須内容です。' }
+  
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
 
   def was_attached?
     self.avatar.attached?

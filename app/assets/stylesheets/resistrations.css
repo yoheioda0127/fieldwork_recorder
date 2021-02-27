@@ -1,7 +1,7 @@
 /* 新規ユーザー登録画面 */
 
 .error-deco {
-  color: crimson;
+  color: rgb(243, 98, 127);
   font-family: monospace;
   font-size: 20px;
   line-height: 50px;

@@ -11,12 +11,16 @@ class Article < ApplicationRecord
     self.top_image.attached?
   end
 
-  validates :title, length: {maximum: 30}
+  validates :top_image,    presence: {message: 'は必須内容です。' }
 
-  validates :location, length: {maximum: 45}
+  validates :title,        presence: true, length: {maximum: 30, message: 'は30文字以内です。'}
 
-  validates :memo, length: {maximum: 170}
+  validates :weather_id,   presence: true, numericality: { other_than: 1 },inclusion: {in: 1..15 }
 
-  validates :appeal_point, length: {maximum: 120}
+  validates :location,     length: {maximum: 45, message: 'は45文字以内です。'}
+
+  validates :appeal_point, length: {maximum: 120, message: 'は120文字以内です。'}
+
+  validates :memo,         length: {maximum: 170, message: 'は170文字以内です。'}
 
 end

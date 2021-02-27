@@ -1,8 +1,10 @@
 <div class="new-back-ground">
   <div class="new-edit-field">
     <h2 class="post-new-edit-field">活動記事投稿</h2>
-    <%= form_for(@article) do |f| %>
-
+    <%= form_for(@article) do |f|%>
+      <div class= "error-deco">
+        <%= render "/shared/error_messages" %>
+      </div>
       <div class="field">
         <div class= "title-word">タイトル（必須）</div>
         <div><%= f.text_field :title, autofocus: true, placeholder: "　（例）初めての魚沼層群の調査　※30文字以内", autocomplete: "title", class: "field-1" %></div>
@@ -46,9 +48,9 @@
         <%= f.text_area :appeal_point, autocomplete: "appeal_point", placeholder: "　（例）自前のウオヌマハンマーを持っていきました！斜面登りに役立ちます！　※120文字以内", class: "field-2" %>
       </div>
 
-    <div class="actions">
-      <%= f.submit "投稿する", class: "new-edit-actions" %>
-    </div>
-  <% end %>
+      <div class="actions">
+        <%= f.submit "投稿する", class: "new-edit-actions" %>
+      </div>
+    <% end %>
   </div>
 </div>

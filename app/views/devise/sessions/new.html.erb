@@ -4,6 +4,11 @@
 </div>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class='error-deco'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
 <div class = "login-info-contents">
   <div class = "mail-field-box">
     <div class = "mail-address-tag">

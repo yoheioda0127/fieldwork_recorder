@@ -15,7 +15,7 @@ class Article < ApplicationRecord
 
   validates :title,        presence: true, length: {maximum: 30, message: 'は30文字以内です。'}
 
-  validates :weather_id,   presence: true, numericality: { other_than: 1 },inclusion: {in: 1..15 }
+  validates :weather_id,   presence: true, numericality: { other_than: 1, message: 'は必ず選択してください。'},inclusion: {in: 1..15 }
 
   validates :location,     length: {maximum: 45, message: 'は45文字以内です。'}
 

@@ -1,5 +1,13 @@
 /* 新規ユーザー登録画面 */
 
+.error-deco {
+  color: crimson;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 50px;
+  margin-bottom: 40px;
+}
+
 .user-new-resi-word{
   font-family: monospace;
   font-weight: bold;

@@ -12,16 +12,16 @@ class User < ApplicationRecord
   has_many         :following, through: :active_relationships, source: :followed
   has_many         :followers, through: :passive_relationships, source: :follower
 
-  validates :name, presence: true, length: {maximum: 15}
+  validates :name,                presence: { message: 'は必須内容です。' }, length: {maximum: 15, message: 'は15文字以内です。'}
 
-  validates :reserch_theme, length: {maximum: 60}
+  validates :research_theme,       length: {maximum: 60, message: 'は60文字以内です。'}
 
-  validates :introduction, length: {maximum: 150}
+  validates :introduction,        length: {maximum: 150, message: 'は150文字以内です。'}
 
-  validates :password, presence: true, length: { minimum: 6 }, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
+  validates :password,            presence: true, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}
   # 英数半角記号
 
-  validates :major_id, presence: true
+  validates :major_id,            presence: { message: 'は必須内容です。' }
 
   def was_attached?
     self.avatar.attached?

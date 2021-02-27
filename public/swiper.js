@@ -20,6 +20,6 @@ const swiper = new Swiper('.swiper-container', {
   },
 
   autoplay: {
-    delay: 4000,
+    delay: 5000,
   },
 });

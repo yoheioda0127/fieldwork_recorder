@@ -3,7 +3,11 @@
   <h1 class="new-person" >新規登録</h1>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <%# エラーメッセージ %>
+    <div class= "error-deco">
+      <%= render "devise/shared/error_messages", resource: resource %>
+    </div>
 
     <div class="user-new-resi-field">
       <div class = "user-new-resi-word">名前 or ニックネーム" </div>

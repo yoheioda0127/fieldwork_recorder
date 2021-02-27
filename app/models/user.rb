@@ -18,10 +18,23 @@ class User < ApplicationRecord
 
   validates :introduction,        length: {maximum: 150, message: 'は150文字以内です。'}
 
-  validates :password,            presence: true, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}
+  validates :password,            presence: { message: 'を入力してください。'}, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}
   # 英数半角記号
 
   validates :major_id,            presence: { message: 'は必須内容です。' }
+  
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
 
   def was_attached?
     self.avatar.attached?

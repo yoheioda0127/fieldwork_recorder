@@ -3,6 +3,9 @@
 ## 開発したアプリ名
 Fieldwork Recorder
 
+## 概要
+野外活動（フィールドワーク）の写真記録アプリです。
+
 ## 開発環境
 - macOS Catalina 10.15.7
 - Visual Studio Code
@@ -17,6 +20,14 @@ Fieldwork Recorder
 ## URL
 http://54.168.22.24/  
 ※本番環境：AWS EC2
+
+## テスト用アカウント
+### Basic認証
+  user-name:field / password:1212
+### ユーザー
+- ニックネーム: まいけみ
+- メールアドレス: maikemi@gamil.com
+- パスワード: a025987
 
 ## Cloneの作成
 
@@ -78,13 +89,6 @@ http://54.168.22.24/
 ⑤ 投稿に対してのいいね機能  
 ⑥ ダイレクトメール機能 
 
-## テスト用アカウント
-### Basic認証
-  user-name:field / password:1212
-### ユーザー
-- ニックネーム: まいけみ
-- メールアドレス: maikemi@gamil.com
-- パスワード: a025987
 
 <!-- ## アプリ設計 -->
 
@@ -92,7 +96,7 @@ http://54.168.22.24/
 <!-- ### ER図(DB設計) -->
 
 
-### テーブル設計
+## テーブル設計
 
 ### usersテーブル
 | Column             | Type    | Options     |

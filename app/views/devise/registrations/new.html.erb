@@ -3,6 +3,8 @@
   <h1 class="new-person" >新規登録</h1>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    
+    <%# エラーメッセージ %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="user-new-resi-field">

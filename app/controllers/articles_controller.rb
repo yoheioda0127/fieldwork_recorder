@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_article, only: [:edit, :show, :update, :destroy]
 
   def index
     @articles = Article.includes(:user).order("created_at DESC")
@@ -20,7 +21,6 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
     def activity
       (Article.count).to_s
     end
@@ -28,14 +28,12 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    @article = Article.find(params[:id])
     if @article.user_id != current_user.id
       redirect_to action: :index
     end
   end
 
   def update
-    @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to action: :index
     else
@@ -44,7 +42,6 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
     if @article.destroy
       redirect_to action: :index
     end
@@ -54,5 +51,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:user_id, :title, :activity_date, :weather_id, :location, :appeal_point, :memo, :top_image, :image_1, :image_2).merge(user_id: current_user.id)
+  end
+
+  def set_article
+    @article = Article.find(params[:id])
   end
 end

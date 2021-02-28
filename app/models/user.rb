@@ -18,7 +18,8 @@ class User < ApplicationRecord
 
   validates :introduction,        length: {maximum: 150, message: 'は150文字以内です。'}
 
-  validates :password,            presence: { message: 'を入力してください。'}, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}
+  validates :password,            presence: { message: 'を入力してください。'}, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}, on: :create
+  validates :encrypted_password,            confirmation: true, on: :create
   # 英数半角記号
 
   validates :major_id,            presence: { message: 'は必須内容です。' }

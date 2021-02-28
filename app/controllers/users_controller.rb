@@ -7,6 +7,15 @@ class UsersController < ApplicationController
     # @article = Article.find(params[:id])
   end
   
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to root_path, dark: 'ユーザー情報の編集ができました'
+    else
+      flash[:danger] = 'ユーザー情報の編集ができませんでした'
+      render :edit
+    end
+  end
 
   # def followings
   #   @user =User.find(params[:id])

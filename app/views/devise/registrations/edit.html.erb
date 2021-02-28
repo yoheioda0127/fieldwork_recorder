@@ -26,16 +26,7 @@
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "　（例）field-recorder@gmail.com", class: "field-5" %>
     </div>
 
-    <div class="user-new-resi-field">
-      <div class="user-password-re-word">パスワード</div>
-      <%= f.password_field :password, autocomplete: "new-password", placeholder: "　半角英数6文字以上", class: "field-5" %>
-      <% :current_password == :password %>
-    </div>
 
-    <div class="user-new-resi-field">
-      <div class="user-password-re-word">パスワード（確認用）</div>
-      <%= f.password_field :encrypted_password, autocomplete: "new-password", placeholder: "　半角英数6文字以上", class: "field-5" %>
-    </div>
 
     <div class="user-new-resi-field">
       <div class='user-birthday-word'>専攻科目（一番近い科目を選択してください）</div>

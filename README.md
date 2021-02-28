@@ -23,10 +23,19 @@ http://54.168.22.24/
 
 ## テスト用アカウント
 ### Basic認証
-  user-name:field / password:1212
-### ユーザー
-- ニックネーム: まいけみ
-- メールアドレス: maikemi@gamil.com
+  user-name:field / password:1212  
+  
+### ユーザー1
+- ニックネーム: ようへい
+- メールアドレス: maikemi@gmail.com
+- パスワード: a025987
+- ### ユーザー2
+- ニックネーム: 川田次郎
+- メールアドレス: kawada@gmail.com
+- パスワード: a025987
+- ### ユーザー1
+- ニックネーム:山本太郎
+- メールアドレス: yamamoto@gmail.com
 - パスワード: a025987
 
 ## Cloneの作成

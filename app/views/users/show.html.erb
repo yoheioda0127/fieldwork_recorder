@@ -59,7 +59,7 @@
 
 
     <div class="asset-article-box">
-      <h1 class = "user-show-time-line-word" ><b>タイムライン</b></h1>
+      <h1 class = "user-show-time-line-word" >タイムライン</h1>
       <% if @articles.present? %>
         <div class="user-show-content-post-back">
           <% @articles.each do |article| %>
@@ -68,15 +68,15 @@
                 <%= link_to article_path(article.id), class: "active-all" do %>
                   <div class = "user-show-content-part">
                       <div class="title-box">
-                        <h2 class = "title"><b><%= article.title %></b></h2>
+                        <h2 class = "user-show-content-title"><b><%= article.title %></b></h2>
                       </div>
                       <div class="user-show-second-area">
                         <div class = "second-right">
                           <div class = "user-show-content-major">
-                              <div class="major-word"><b>ジャンル：<%= article.user.major.name %>系</b></div>
+                              <div class="user-show-content-major-word"><b>ジャンル：<%= article.user.major.name %>系</b></div>
                           </div>
                           <div class = "user-show-index-active-day">
-                            <div >活動日：<%= article.activity_date %></div>
+                            <div class="user-show-content-active-day">活動日：<%= article.activity_date %></div>
                           </div>
                         </div> 
                       </div>

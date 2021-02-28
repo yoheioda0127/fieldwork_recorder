@@ -3,46 +3,8 @@
 ## 開発したアプリ名
 Fieldwork Recorder
 
-## 概要
+## テーマは？
 野外活動（フィールドワーク）の写真記録アプリです。
-
-## 開発環境
-- macOS Catalina 10.15.7
-- Visual Studio Code
-- Github  
-
-- Ruby 2.6.5
-- Ruby on Rails 6.0.3.4
-- HTML
-- CSS
-- MySQL 5.6
-
-## URL
-http://54.168.22.24/  
-※本番環境：AWS EC2
-
-## テスト用アカウント
-### Basic認証
-  user-name:field / password:1212  
-  
-### ユーザー1
-- ニックネーム: ようへい
-- メールアドレス: maikemi@gmail.com
-- パスワード: a025987
-### ユーザー2
-- ニックネーム: 川田次郎
-- メールアドレス: kawada@gmail.com
-- パスワード: a025987
-### ユーザー3
-- ニックネーム:山本太郎
-- メールアドレス: yamamoto@gmail.com
-- パスワード: a025987
-
-## Cloneの作成
-
-```
-% git clone https://github.com/yoheioda0127/fieldwork_recorder.git
-``` 
 
 ## 開発背景
 ### 作者のバックグラウンド：「太古のロマン」
@@ -98,6 +60,44 @@ http://54.168.22.24/
 ⑤ 投稿に対してのいいね機能  
 ⑥ ダイレクトメール機能 
 
+
+## 開発環境
+- macOS Catalina 10.15.7
+- Visual Studio Code
+- Github  
+
+- Ruby 2.6.5
+- Ruby on Rails 6.0.3.4
+- HTML
+- CSS
+- MySQL 5.6
+
+## URL
+http://54.168.22.24/  
+※本番環境：AWS EC2
+
+## テスト用アカウント
+### Basic認証
+  user-name:field / password:1212  
+  
+### ユーザー1
+- ニックネーム: ようへい
+- メールアドレス: maikemi@gmail.com
+- パスワード: a025987
+### ユーザー2
+- ニックネーム: 川田次郎
+- メールアドレス: kawada@gmail.com
+- パスワード: a025987
+### ユーザー3
+- ニックネーム:山本太郎
+- メールアドレス: yamamoto@gmail.com
+- パスワード: a025987
+
+## Cloneの作成
+
+```
+% git clone https://github.com/yoheioda0127/fieldwork_recorder.git
+``` 
 
 <!-- ## アプリ設計 -->
 

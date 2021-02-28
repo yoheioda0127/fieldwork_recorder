@@ -59,7 +59,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 10px;
-  width: calc((100% - 50px) / 3)
+  width: calc((100% - 50px) / 3);
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -235,7 +235,7 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 10px;
-    width: calc((100% - 50px) / 3)
+    width: calc((100% - 50px) / 3);
     padding-top: 50px;
   }
   .active-all:hover {

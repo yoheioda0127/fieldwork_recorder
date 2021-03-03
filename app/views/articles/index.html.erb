@@ -2,26 +2,26 @@
 
   <!-- Slider main container -->
   <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><img src="images/slider-1.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-2.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-3.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-4.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-5.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-6.jpg" class="head-img"></div>
-          <div class="swiper-slide"><img src="images/slider-7.jpg" class="head-img"></div>
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="images/slider-1.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-2.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-3.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-4.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-5.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-6.jpg" class="head-img"></div>
+        <div class="swiper-slide"><img src="images/slider-7.jpg" class="head-img"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
 
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+    <!-- If we need scrollbar -->
+    <div class="swiper-scrollbar"></div>
   </div>
 
   <div class="index-time-line">
@@ -41,7 +41,6 @@
                               <%= image_tag article.user.avatar, class: 'index-avatar' %>
                             <%else%>
                               <%= image_tag 'sample-avatar.jpg', class: 'index-avatar' %>
-                              <%# <img src="sample-avatar.jpg" class="index-avatar"> %>
                             <% end %>
                           </div>
                         <div class = "second-right">
@@ -64,7 +63,6 @@
           <% end %>
         <% end %>
       <% end %>
-      <%# 投稿がないときのサンプル投稿 %>
     </div>
     <%else%>
     <div class="index-dummy-word">まだ活動記事がありません。<br>あなたの活動を投稿しましょう！</div>

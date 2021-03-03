@@ -28,7 +28,6 @@
         </div>
     </div>
 
-
     <div class="new-edit-weather-word">当日の天気</div>
       <div class="weight-bold-text">
         <%= f.collection_select(:weather_id, Weather.all, :id, :name, {}, {class: "field-3", id:"weather_id"}) %>

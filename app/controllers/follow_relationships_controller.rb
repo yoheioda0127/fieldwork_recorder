@@ -1,4 +1,5 @@
 class FollowRelationshipsController < ApplicationController
+
   def create
     @user =User.find(params[:follow_relationship][:following_id])
     current_user.follow(@user)
@@ -16,6 +17,7 @@ class FollowRelationshipsController < ApplicationController
       format.js
     end
   end
+  
   def create
     @user =User.find(params[:follow_relationship][:following_id])
     current_user.follow(@user)

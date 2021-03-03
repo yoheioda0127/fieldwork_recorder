@@ -12,35 +12,35 @@ class User < ApplicationRecord
   has_many         :following, through: :active_relationships, source: :followed
   has_many         :followers, through: :passive_relationships, source: :follower
 
-  validates :name,                presence: { message: 'は必須内容です。' }, length: {maximum: 15, message: 'は15文字以内です。'}
+  validates :name,                  presence: { message: 'は必須内容です。' }, length: {maximum: 15, message: 'は15文字以内です。'}
 
-  validates :research_theme,       length: {maximum: 60, message: 'は60文字以内です。'}
+  validates :research_theme,        length: {maximum: 60, message: 'は60文字以内です。'}
 
-  validates :introduction,        length: {maximum: 150, message: 'は150文字以内です。'}
+  validates :introduction,          length: {maximum: 150, message: 'は150文字以内です。'}
 
-  validates :password,            presence: { message: 'を入力してください。'}, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}, on: :create
-  validates :encrypted_password,            confirmation: true, on: :create
+  validates :password,              presence: { message: 'を入力してください。'}, length: { minimum: 6 , message: 'は6文字以上です。'}, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i , message: 'は半角英数です。'}, on: :create
+  validates :encrypted_password,    confirmation: true, on: :create
   # 英数半角記号
 
-  validates :major_id,            presence: { message: 'は必須内容です。' }
+  validates :major_id,              presence: { message: 'は必須内容です。' }
 
   def was_attached?
     self.avatar.attached?
   end
 
-    # ユーザーをフォローする
-    def follow(other_user)
-      self.following << other_user
-    end
-  
-    # ユーザーをフォロー解除する
-    def unfollow(other_user)
-      self.active_relationships.find_by(followed_id: other_user.id).destroy
-    end
-  
-    # 現在のユーザーがフォローしてたらtrueを返す
-    def following?(other_user)
-      self.following.include?(other_user)
-    end
+  # ユーザーをフォローする
+  def follow(other_user)
+    self.following << other_user
+  end
+
+  # ユーザーをフォロー解除する
+  def unfollow(other_user)
+    self.active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+
+  # 現在のユーザーがフォローしてたらtrueを返す
+  def following?(other_user)
+    self.following.include?(other_user)
+  end
 
 end

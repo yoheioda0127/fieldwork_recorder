@@ -17,7 +17,6 @@
               <%= image_tag @article.user.avatar, class: 'avatar-box-img' %>
             <%else%>
               <%= image_tag 'sample-avatar.jpg', class: 'avatar-box-img' %>
-              <%# <img src="sample-avatar.jpg" class="prof-avatar-data"> %>
             <% end %>
             <h3 class="user_name"><b><%= link_to @article.user.name, "/users/#{@article.user_id}", class: "link_user_name" %></b></h3>
         </div>

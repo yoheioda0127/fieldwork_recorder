@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     @days = activity
   end
 
+  
   private
 
   def configure_permitted_parameters

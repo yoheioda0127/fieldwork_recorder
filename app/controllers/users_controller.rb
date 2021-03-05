@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @articles = Article.includes(:user).order("created_at DESC")
-    # @article = Article.find(params[:id])
   end
   
   def update

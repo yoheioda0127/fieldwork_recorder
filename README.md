@@ -70,6 +70,7 @@ Fieldwork Recorder
 - Ruby on Rails 6.0.3.4
 - HTML
 - CSS
+- JavaScript
 - MySQL 5.6
 
 ## URL

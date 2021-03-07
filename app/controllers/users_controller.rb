@@ -28,7 +28,6 @@ class UsersController < ApplicationController
     render 'show_follower'
   end
 
-
   private
   
   def article_params

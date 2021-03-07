@@ -90,7 +90,7 @@ http://54.168.22.24/
 - メールアドレス: kawada@gmail.com
 - パスワード: a025987
 ### ユーザー3
-- ニックネーム:山本太郎
+- ニックネーム: 山本太郎
 - メールアドレス: yamamoto@gmail.com
 - パスワード: a025987
 
@@ -154,7 +154,7 @@ https://docs.google.com/spreadsheets/d/1QcTxyX9t4VJOiSGMlv628sJJIzKOI1f2RDyYAgc4
 
 
 ## 今後の実装予定
-① フォロー＆フォロワーページ  
+① フォロー＆フォロワーページデザイン  
 ② コメント機能  
 ③ ダイレクトメッセージ機能  
 ④ 随時リファクタリング  

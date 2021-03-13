@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
+
+
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>FieldworkRecorder</title>
-      <%= csrf_meta_tags %>
-      <%= csp_meta_tag %>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="swiper-bundle.min.css" />
-      <link rel="stylesheet" href="reset.css" />
-      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <script src="swiper-bundle.min.js"></script>
-      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FieldworkRecorder</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="swiper-bundle.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <header class='top-page-header'>
-      <%= link_to image_tag("app_logo.jpg", class: "app_logo_img"), "/" %>
-      <div class='nav-lists'>
-          <% if user_signed_in? %>
-              <div><b><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></b></div>
-              <div><b><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></b></div>
-              <div class = user_name><b><%= link_to current_user.name, "/users/#{current_user.id}", class: "user" %></b></div>
-              <div><b><%= link_to '記事投稿', "/articles/new", class: "post-article" %></b></div>
-          <% else %>
-              <div><b><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></b></div>
-              <div><b><%= link_to 'ログイン', "/users/sign_in", class: "login" %></b></div>
-          <% end %>
-      </div>
-  </header>
+    <%= link_to image_tag("app_logo.jpg", class: "app_logo_img"), "/" %>
 
+    <div class='nav-lists'>
+      <% if user_signed_in? %>
+        <div><b><%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %></b></div>
+        <div><b><%= link_to 'プロフィール編集', "/users/edit", class: "edit" %></b></div>
+        <div class = user_name><b><%= link_to current_user.name, "/users/#{current_user.id}", class: "user" %></b></div>
+        <div><b><%= link_to '記事投稿', "/articles/new", class: "post-article" %></b></div>
+      <% else %>
+        <div><b><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></b></div>
+        <div><b><%= link_to 'ログイン', "/users/sign_in", class: "login" %></b></div>
+      <% end %>
+    </div>
+
+  </header>
   <body>
-      <div class="wrap-header"></div>
-          
-      <script src="swiper.js"></script>
-      <div class='footer-contents-box'>
-          <div class = "footer-contents">
-            <div>フィールドワーク</div>
-            <div>利　用　方　法</div>
-            <div>利　用　規　約</div>
-            <div>作　者　情　報</div>
-          </div>
-          <div class = "footer-contents-copyright">
-            <div> Copyright © Fieldwork Recorder All rights reserved. </div>
-          </div>
+    <div class="wrap-header"></div>
+      <%= yield %>
+    <script src="swiper.js"></script>
+    <div class='footer-contents-box'>
+      <div class = "footer-contents">
+        <div>フィールドワーク</div>
+        <div>利　用　方　法</div>
+        <div>利　用　規　約</div>
+        <div>作　者　情　報</div>
       </div>
+      <div class = "footer-contents-copyright">
+        <div> Copyright © Fieldwork Recorder All rights reserved. </div>
+      </div>
+    </div>
   </body>
 </html>

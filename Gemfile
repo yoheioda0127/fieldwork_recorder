@@ -81,3 +81,5 @@ gem 'rails-i18n'
 gem "aws-sdk-s3", require: false
 
 gem 'faker'
+
+gem 'high_voltage'

@@ -58,8 +58,13 @@
         <p class="appeal-point-text-data"><%= @article.appeal_point %>
       </div>
     </div>
-    <div class ="show-bottom">
-        <%= link_to "記事の編集・削除を行う", edit_article_path(@article.id), class: "article-edit-delete" %>
-        <%= link_to "TOPへ戻る", :back  ,class: "show-back"%>
-    </div>
+    <% if user_signed_in? %>
+      <% if current_user.id == @article.user_id %>
+        <div class ="show-bottom">
+            <%= link_to "記事の編集・削除を行う", edit_article_path(@article.id), class: "article-edit-delete" %>
+            <%= link_to "TOPへ戻る", :back  ,class: "show-back"%>
+        </div>
+      <%end%>
+    <%end%>
+
 </div>

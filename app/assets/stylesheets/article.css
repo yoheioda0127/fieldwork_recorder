@@ -1109,6 +1109,7 @@
   background-color: rgb(199, 197, 197);
 }
 .footer-contents {
+  text-decoration: none;
   font-family: monospace;
   font-size: 20px;
   padding-top: 30px;
@@ -1117,6 +1118,16 @@
   justify-content: center;
   justify-content: space-around;
 }
+
+.footer-solo-info {
+  text-decoration: none;
+  color: black;
+}
+:hover.footer-solo-info {
+  text-decoration: none;
+  color: blue;
+}
+
 
 .footer-contents-copyright {
   font-family: monospace;

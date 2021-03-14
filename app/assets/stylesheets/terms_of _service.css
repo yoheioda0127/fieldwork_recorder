@@ -1,0 +1,22 @@
+.terms-of-service-box {
+  display: flex;
+  width: 1400px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  flex-direction: column;
+  line-height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.terms-of-service-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}

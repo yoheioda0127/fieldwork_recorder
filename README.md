@@ -1,7 +1,7 @@
 ![トップ画像](https://github.com/yoheioda0127/fieldwork_recorder/blob/master/app/assets/images/app_logo.jpg)  
 # オリジナルアプリ紹介
 ## 開発したアプリ名
-Fieldwork Recorder
+「Fieldwork Recorder（フィールドワーク レコーダー）」
 
 ## テーマは？
 野外活動（フィールドワーク）の写真記録アプリです。
